@@ -22,7 +22,7 @@
 
   
 
-  <title>Test1 | Hexo</title>
+  <title>闭包及this | Hexo</title>
 
   
 
@@ -99,7 +99,7 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Test1</h1>
+          <h1 class="title-wrap">闭包及this</h1>
           <h2 class="title-sub-wrap">
             <strong>John Doe</strong>
             <span>发布于</span>
@@ -139,41 +139,23 @@
 </blockquote>
 <h2 id="this指向"><a href="#this指向" class="headerlink" title="this指向"></a>this指向</h2><p><strong>this的指向取决于它调用的方式</strong></p>
 <ul>
-<li>1.直接调用函数，this指向window<blockquote>
-<p>function fn(){<br>console.log(this);<br>}<br>fn();<br><em>此时 fn() 相当于 window.fn()</em></p>
-</blockquote>
-</li>
-<li>2.通过new调用，this指向新对象<blockquote>
-<p>class Person{<br>constructor(age){<br>this.age&#x3D;age<br>}<br>say(){<br>console.log(‘我年龄是${this.age}’)<br>} }<br>let lsy&#x3D;new Person(21);<br>lsy.say();<br>console.log(lsy);</p>
-</blockquote>
-</li>
-<li>3.通过对象调用，this指向前面的对象<blockquote>
-<p>function fn(){<br>console.log(this);<br>}<br>let obj &#x3D;{<br>a:1<br>}<br>obj.fn &#x3D; fn<br>obj.fn()<br><em>此时this指向obj</em></p>
-</blockquote>
-</li>
-<li>4.箭头函数中this指向父级上下文的对象<blockquote>
-<p>let fn &#x3D; ()&#x3D;&gt;{<br>console.log(this);<br>}<br>let obj &#x3D;{<br>a:1<br>}<br>obj.fn &#x3D; fn<br>obj.fn()<br><em>此时this指向window</em></p>
-</blockquote>
-</li>
-<li>5.通过call apply bind改变this指向，this指向第一个参数<blockquote>
-<p>function fn() {<br>console.log(this);<br>}<br>let obj1 &#x3D;{<br>a:1<br>}<br>let obj2 &#x3D;{<br>b:2<br>}<br>obj1.fn &#x3D; fn</p>
-<p>obj1.fn.call(obj2)<br>obj1.fn.apply(obj2)<br>obj1.fn.bind(obj2)()<br><em>此时this指向obj2</em></p>
-</blockquote>
-</li>
+<li>1.直接调用函数，this指向window<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fn()&#123;</span><br><span class="line">console.log(this);</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br></pre></td></tr></table></figure>
+此时 fn() 相当于 window.fn()</li>
+<li>2.通过new调用，this指向新对象<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">constructor(age)&#123;</span><br><span class="line">this.age=age</span><br><span class="line">&#125;</span><br><span class="line">say()&#123;</span><br><span class="line">console.log(&#x27;我年龄是$&#123;this.age&#125;&#x27;)</span><br><span class="line">&#125; &#125;</span><br><span class="line">let lsy=new Person(21);</span><br><span class="line">lsy.say();</span><br><span class="line">console.log(lsy);</span><br></pre></td></tr></table></figure></li>
+<li>3.通过对象调用，this指向前面的对象<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function fn()&#123;</span><br><span class="line">console.log(this);</span><br><span class="line">&#125;</span><br><span class="line">let obj =&#123;</span><br><span class="line">a:1</span><br><span class="line">&#125;</span><br><span class="line">obj.fn = fn</span><br><span class="line">obj.fn()</span><br></pre></td></tr></table></figure>
+此时this指向obj</li>
+<li>4.箭头函数中this指向父级上下文的对象<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let fn = ()=&gt;&#123;</span><br><span class="line">console.log(this);</span><br><span class="line">&#125;</span><br><span class="line">let obj =&#123;</span><br><span class="line">a:1</span><br><span class="line">&#125;</span><br><span class="line">obj.fn = fn</span><br><span class="line">obj.fn()</span><br></pre></td></tr></table></figure>
+此时this指向window</li>
+<li>5.通过call apply bind改变this指向，this指向第一个参数<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function fn() &#123;</span><br><span class="line">console.log(this);</span><br><span class="line">&#125;</span><br><span class="line">let obj1 =&#123;</span><br><span class="line">a:1</span><br><span class="line">&#125;</span><br><span class="line">let obj2 =&#123;</span><br><span class="line">b:2</span><br><span class="line">&#125;</span><br><span class="line">obj1.fn = fn</span><br><span class="line"></span><br><span class="line">obj1.fn.call(obj2)</span><br><span class="line">obj1.fn.apply(obj2)</span><br><span class="line">obj1.fn.bind(obj2)()</span><br></pre></td></tr></table></figure>
+此时this指向obj2</li>
 </ul>
 <h2 id="闭包中的this"><a href="#闭包中的this" class="headerlink" title="闭包中的this"></a>闭包中的this</h2><ul>
-<li>1.闭包中this默认指向window<blockquote>
-<p>function fn() {<br>return function(){<br>console.log(this);<br>} }<br>let obj &#x3D; {<br>a :1<br>}<br>obj.fn &#x3D; fn<br>obj.fn()()<br><em>此时this指向window</em><br><em>如果在严格模式下，this指向undefined</em></p>
-</blockquote>
-</li>
-<li>2.作为对象的方法被调用时this默认指向改变<blockquote>
-<p>function outer(){<br>let obj &#x3D;{<br>inner:function (){<br>console.log(this)<br>} }<br>obj.inner()<br>}<br>let o&#x3D;{<br>a:1<br>}<br>o.outer &#x3D; outer;<br>o.outer()<br><em>这里this指向obj</em></p>
-</blockquote>
-</li>
-<li>3.闭包中的闭包<blockquote>
-<p>window.name &#x3D; “window”;<br>let obj &#x3D; {<br>name: “one”,<br>outer: function (){<br>this.name &#x3D; “two”;<br>function inner (){<br>this.name &#x3D; “inner”;<br>function innerInner (){<br>console.log(this.name);<br>}<br>return innerInner;<br>}<br>return inner;<br>} }<br>obj.outer()()();     &#x2F; &#x2F; inner<br><em>函数outer和函数innerlnner均为闭包，先执行函数outer将window替换为inner,再执行innerlnner函数，最终输出inner</em></p>
-</blockquote>
-</li>
+<li>1.闭包中this默认指向window<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function fn() &#123;</span><br><span class="line">return function()&#123;</span><br><span class="line">console.log(this);</span><br><span class="line">&#125; &#125;</span><br><span class="line">let obj = &#123;</span><br><span class="line">a :1</span><br><span class="line">&#125;</span><br><span class="line">obj.fn = fn</span><br><span class="line">obj.fn()()</span><br></pre></td></tr></table></figure>
+此时this指向window<br>如果在严格模式下，this指向undefined</li>
+<li>2.作为对象的方法被调用时this默认指向改变<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function outer()&#123;</span><br><span class="line">let obj =&#123;</span><br><span class="line">inner:function ()&#123;</span><br><span class="line">console.log(this)</span><br><span class="line">&#125; &#125;</span><br><span class="line">obj.inner()</span><br><span class="line">&#125;</span><br><span class="line">let o=&#123;</span><br><span class="line">a:1</span><br><span class="line">&#125;</span><br><span class="line">o.outer = outer;</span><br><span class="line">o.outer()</span><br></pre></td></tr></table></figure>
+这里this指向obj</li>
+<li>3.闭包中的闭包<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">window.name = &quot;window&quot;;</span><br><span class="line">let obj = &#123;</span><br><span class="line">name: &quot;one&quot;,</span><br><span class="line">outer: function ()&#123;</span><br><span class="line">this.name = &quot;two&quot;;</span><br><span class="line">function inner ()&#123;</span><br><span class="line">this.name = &quot;inner&quot;;</span><br><span class="line">function innerInner ()&#123;</span><br><span class="line">console.log(this.name);</span><br><span class="line">&#125;</span><br><span class="line">return innerInner;</span><br><span class="line">&#125;</span><br><span class="line">return inner;</span><br><span class="line">&#125; &#125;</span><br><span class="line">obj.outer()()();     // inner</span><br></pre></td></tr></table></figure>
+函数outer和函数innerlnner均为闭包，先执行函数outer将window替换为inner,再执行innerlnner函数，最终输出inner</li>
 </ul>
 
       </section>

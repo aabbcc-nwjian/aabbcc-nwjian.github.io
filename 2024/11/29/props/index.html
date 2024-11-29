@@ -22,7 +22,7 @@
 
   
 
-  <title>Hello World | Hexo</title>
+  <title>react props | Hexo</title>
 
   
 
@@ -99,17 +99,12 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">react props</h1>
           <h2 class="title-sub-wrap">
             <strong>YJ</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2024-11-01T11:49:57.956Z" itemprop="datePublished">2024-11-01</time>
+            <time  class="article-date" datetime="2024-11-29T04:11:47.000Z" itemprop="datePublished">2024-11-29</time>
           </h2>
-          
-            <h2 class="last-time">
-              <span>最后更新于</span>
-              <time  class="article-updated" datetime="1985-10-26T08:15:00.000Z" itemprop="dateUpdated">1985-10-26</time>
-            </h2>
           
           
           <ul class="wrap-list dark">
@@ -139,25 +134,32 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="react中的props"><a href="#react中的props" class="headerlink" title="react中的props"></a>react中的props</h1><h2 id="什么是props"><a href="#什么是props" class="headerlink" title="什么是props"></a>什么是props</h2><p>1.定义：Props 是你传递给 JSX 标签的信息。例如，<code>className</code>、<code>src</code>、<code>alt</code>、<code>width</code> 和 <code>height</code>。</p>
+<p>2.作用：用于向组件传递数据。</p>
+<h2 id="向组件中传递props"><a href="#向组件中传递props" class="headerlink" title="向组件中传递props"></a>向组件中传递props</h2><p>1.传递的数据<br>props可以传递任意数据，如：数字、字符串、布尔值、数组、对象、函数、jsx</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;Son</span><br><span class="line">name=&#123;appName&#125;</span><br><span class="line">age=&#123;20&#125;</span><br><span class="line">isTrue=&#123;false&#125;</span><br><span class="line">list=&#123;[&#x27;Vue&#x27;,&#x27;React&#x27;]&#125;</span><br><span class="line">obj=&#123;&#123; name:&#x27;jack&#x27;&#125;&#125;</span><br><span class="line">cb=[() =&gt; console.log(123)]&#125;</span><br><span class="line">child=&#123;&lt;span&gt;this is span child&lt;/span&gt;&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+<p>2.将 props 传递给子组件<br>首先，将一些 props 传递给 <code>Avatar</code>。例如，让我们传递两个 props：<code>person</code>（一个对象）和 <code>size</code>（一个数字）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export default function Profile() &#123;  </span><br><span class="line">return (  </span><br><span class="line">&lt;Avatar  </span><br><span class="line">person=&#123;&#123; name: &#x27;Lin Lanying&#x27;, imageId: &#x27;1bX5QH6&#x27; &#125;&#125;  </span><br><span class="line">size=&#123;100&#125;  </span><br><span class="line">/&gt;  </span><br><span class="line">);  &#125;</span><br></pre></td></tr></table></figure>
+<p>3.### 在子组件中读取 props<br>你可以通过在 <code>function Avatar</code> 之后设定一个形参并用<code>console.log</code>打印，接着就能在控制台中查看传递到子组件的数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function Avatar(props) &#123;</span><br><span class="line">console.log(props);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="children"><a href="#children" class="headerlink" title="children"></a>children</h2><p>当我们把内容嵌套在子组件标签中时，父组件会自动在名为children的props属性中接收该内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Son&gt;</span><br><span class="line">&lt;span&gt;this is span&lt;/span&gt;</span><br><span class="line">&lt;/Son&gt;</span><br></pre></td></tr></table></figure>
+<p>该代码中span中的数据即为children接收的内容，可在子组件中调用children中的内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function Son(props) &#123;</span><br><span class="line">return &lt;div&gt;&#123;props.children&#125;&lt;/div&gt;</span><br><span class="line">&#125;</span><br><span class="line">function App() &#123;</span><br><span class="line">return (</span><br><span class="line">&lt;Son&gt;</span><br><span class="line">&lt;span&gt;this is span&lt;/span&gt;</span><br><span class="line">&lt;/Son&gt;</span><br><span class="line">)&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="给-prop-指定一个默认值"><a href="#给-prop-指定一个默认值" class="headerlink" title="给 prop 指定一个默认值"></a>给 prop 指定一个默认值</h2><p>如果你想在没有指定值的情况下给 prop 一个默认值，你可以通过在参数后面写 <code>=</code> 和默认值来进行解构：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function Avatar(&#123; person, size = 100 &#125;) &#123;  </span><br><span class="line">// ...  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在， 如果 <code>&lt;Avatar person=&#123;...&#125; /&gt;</code> 渲染时没有 <code>size</code> prop， <code>size</code> 将被赋值为 <code>100</code>。</p>
+<p>默认值仅在缺少 <code>size</code> prop 或 <code>size=&#123;undefined&#125;</code> 时生效。 但是如果你传递了 <code>size=&#123;null&#125;</code> 或 <code>size=&#123;0&#125;</code>，默认值将 <strong>不</strong> 被使用。</p>
+<h2 id="子组件传向父组件"><a href="#子组件传向父组件" class="headerlink" title="子组件传向父组件"></a>子组件传向父组件</h2><p>先用父组件向子组件传递一个函数，再在子组件里调用这个函数，将子组件中的数据作为实参传递给该函数，相当于将实参传递给父组件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function App()&#123;</span><br><span class="line">  const getMsg = (msg)=&gt; console.log(msg)</span><br><span class="line">  return(</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">  &lt;Son onGetMsg=&#123;getMsg&#125;/&#125;/&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">function Son (&#123; onGetMsg &#125;)&#123;</span><br><span class="line">const sonMsg = &#x27;this is son msg&#x27;</span><br><span class="line">return(</span><br><span class="line">&lt;div&gt;</span><br><span class="line">&lt;button onClick=&#123;()=&gt; onGetMsg(sonMsg)&#125;&gt;&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里子组件将this is son msg作为onGetMsg函数的实参传递给父组件，并在父组件中打印出来。</p>
 
       </section>
 
       
       
         <nav class="article-nav">
+          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
@@ -168,11 +170,10 @@
           <h2 class="card-text--title text-ellipsis">闭包及this</h2>
         </a>
       
-      <div class="card-text--row">Newer</div>
+      <div class="card-text--row">Older</div>
     </div>
   </article>
 </div>
-          
           
         </nav>
       

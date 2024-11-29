@@ -22,7 +22,7 @@
 
   
 
-  <title>Hello World | Hexo</title>
+  <title>react jsx | Hexo</title>
 
   
 
@@ -99,17 +99,12 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">react jsx</h1>
           <h2 class="title-sub-wrap">
             <strong>YJ</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2024-11-01T11:49:57.956Z" itemprop="datePublished">2024-11-01</time>
+            <time  class="article-date" datetime="2024-11-29T10:49:24.000Z" itemprop="datePublished">2024-11-29</time>
           </h2>
-          
-            <h2 class="last-time">
-              <span>最后更新于</span>
-              <time  class="article-updated" datetime="1985-10-26T08:15:00.000Z" itemprop="dateUpdated">1985-10-26</time>
-            </h2>
           
           
           <ul class="wrap-list dark">
@@ -139,19 +134,31 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="react-jsx"><a href="#react-jsx" class="headerlink" title="react jsx"></a>react jsx</h1><h2 id="什么是jsx"><a href="#什么是jsx" class="headerlink" title="什么是jsx"></a>什么是jsx</h2><p><strong>JSX</strong> 是 JavaScript 语法扩展，可以让你在 JavaScript 文件中书写类似 HTML 的标签。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const element = &lt;h1&gt;hello world&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+<p>上述代码中<code>&lt;h1&gt;hello world&lt;/h1&gt;</code>就是一个jsx表达式</p>
+<h1 id="JSX的基本规则"><a href="#JSX的基本规则" class="headerlink" title="JSX的基本规则"></a>JSX的基本规则</h1><ol>
+<li>标签<br>在JSX中，标签类似于HTML中的标签，用尖括号包裹，例如 <code>&lt;div&gt;</code>、<code>&lt;h1&gt;</code> 等。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const element = &lt;div&gt;Hello, JSX!&lt;/div&gt;;</span><br></pre></td></tr></table></figure>
+jsx中的标签必须闭合，像 <code>&lt;img&gt;</code> 这样的自闭合标签必须书写成 <code>&lt;img /&gt;</code>，而像 <code>&lt;li&gt;oranges</code> 这样只有开始标签的元素必须带有闭合标签，需要改<code>&lt;li&gt;oranges&lt;/li&gt;</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;&gt;  </span><br><span class="line">&lt;img </span><br><span class="line">src=&quot;https://i.imgur.com/yXOvdOSs.jpg&quot;  </span><br><span class="line">alt=&quot;Hedy Lamarr&quot;  </span><br><span class="line">class=&quot;photo&quot;  </span><br><span class="line">/&gt;  </span><br><span class="line">&lt;ul&gt;  </span><br><span class="line">&lt;li&gt;发明一种新式交通信号灯&lt;/li&gt;  </span><br><span class="line">&lt;li&gt;排练一个电影场景&lt;/li&gt;  </span><br><span class="line">&lt;li&gt;改进频谱技术&lt;/li&gt;  </span><br><span class="line">&lt;/ul&gt;  </span><br><span class="line">&lt;/&gt;</span><br></pre></td></tr></table></figure></li>
+<li>嵌套<br>JSX支持标签的嵌套，就像在HTML中一样。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const element = (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;Hello&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;JSX!&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+ 但只能返回一个根元素，如果想要在一个组件中包含多个元素，需要用一个父标签把它们包裹起来，如 <code>&lt;div&gt;</code> 标签、<code>&lt;&gt;</code> <code>&lt;/&gt;</code>。</li>
+<li>表达式<br>在JSX中，你可以使用花括号 {} 插入JavaScript表达式。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const name = &quot;React&quot;;</span><br><span class="line">const element = &lt;p&gt;Hello, &#123;name&#125;!&lt;/p&gt;;</span><br></pre></td></tr></table></figure>
+你也可以将多个表达式合并到一个对象中，在 JSX 的花括号内分别使用它们<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const person = &#123;</span><br><span class="line">  name: &#x27;Gregorio Y. Zara&#x27;,</span><br><span class="line">  theme: &#123;</span><br><span class="line">    backgroundColor: &#x27;black&#x27;,</span><br><span class="line">    color: &#x27;pink&#x27;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+除了字符串、数字和其它 JavaScript 表达式，你甚至可以在 JSX 中传递对象。对象也用大括号表示，例如 <code>&#123; name: &quot;Hedy Lamarr&quot;, inventions: 5 &#125;</code>。因此，为了能在 JSX 中传递，你必须用另一对额外的大括号包裹对象，从而出现双括号。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul style=&#123;  </span><br><span class="line">&#123;  </span><br><span class="line">backgroundColor: &#x27;black&#x27;,  </span><br><span class="line">color: &#x27;pink&#x27;  </span><br><span class="line">&#125;  </span><br><span class="line">&#125;&gt;</span><br></pre></td></tr></table></figure></li>
+<li>属性<br>JSX中的属性可以像HTML一样通过键值对的形式进行传递。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const element = &lt;a href=&quot;https://www.example.com&quot;&gt;Visit Example&lt;/a&gt;;</span><br></pre></td></tr></table></figure></li>
+<li>类名和样式<br>使用JSX时，类名需要写成 className，而不是 class，而内联样式则需要使用一个JavaScript对象。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const element = &lt;div className=&quot;my-class&quot; style=&#123;&#123; color: &#x27;red&#x27; &#125;&#125;&gt;Styled Div&lt;/div&gt;;</span><br></pre></td></tr></table></figure></li>
+<li>驼峰命名法<br>JavaScript 对变量的命名有限制。例如，变量名称不能包含 <code>-</code> 符号或者像 <code>class</code> 这样的保留字。<br>这就是为什么在 React 中，大部分 HTML 和 SVG 属性都用驼峰式命名法表示。例如，需要用 <code>strokeWidth</code> 代替 <code>stroke-width</code>。由于 <code>class</code> 是一个保留字，所以在 React 中需要用 <code>className</code> 来代替。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;img  </span><br><span class="line">src=&quot;https://i.imgur.com/yXOvdOSs.jpg&quot;  </span><br><span class="line">alt=&quot;Hedy Lamarr&quot;  </span><br><span class="line">className=&quot;photo&quot;  </span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="jsx的使用"><a href="#jsx的使用" class="headerlink" title="jsx的使用"></a>jsx的使用</h2><ol>
+<li>列表渲染<br>在jsx中可以使用原生js里的<strong>map方法</strong>遍历渲染列表<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const list =[</span><br><span class="line">&#123;id:001, name: &#x27;one&#x27;&#125;</span><br><span class="line">&#123;id:002, name: &#x27;two&#x27;&#125;</span><br><span class="line">&#123;id:003, name: &#x27;three&#x27;&#125;</span><br><span class="line">]</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">  &#123;list.map(item =&gt;&lt;li key=&#123;item.id&#125;&gt;&#123;item&#125;&lt;/li&gt;)&#125;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+其中key 用于告诉 React，每个组件对应着数组里的哪一项，所以 React 可以把它们匹配起来。这在数组项进行移动（例如排序）、插入或删除等操作时非常重要。一个合适的 <code>key</code> 可以帮助 React 推断发生了什么，从而得以正确地更新 DOM 树。<br>所以你必须给数组中的每一项都指定一个 <code>key</code>——它可以是字符串或数字的形式，只要能唯一标识出各个数组项。</li>
+</ol>
+<h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2><ul>
+<li><strong>与运算符（<code>&amp;&amp;</code>）</strong><br>你会遇到的一个常见的快捷表达式是在 React 组件里，通常用在当条件成立时，你想渲染一些 JSX，<strong>或者不做任何渲染</strong>。使用 <code>&amp;&amp;</code>，你也可以实现仅当 <code>isPacked</code> 为 <code>true</code> 时，渲染勾选符号。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">return (  </span><br><span class="line">&lt;li className=&quot;item&quot;&gt;  </span><br><span class="line">&#123;name&#125; &#123;isPacked &amp;&amp; &#x27;✅&#x27;&#125;  </span><br><span class="line">&lt;/li&gt;  </span><br><span class="line">);</span><br></pre></td></tr></table></figure></li>
+<li><strong>三目运算符（<code>? :</code>）</strong><br>JavaScript 有一种紧凑型语法来实现条件判断表达式——[条件运算符]又称“三目运算符”。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">return (  </span><br><span class="line">&lt;li className=&quot;item&quot;&gt;  </span><br><span class="line">&#123;isPacked ? name + &#x27; ✅&#x27; : name&#125;  </span><br><span class="line">&lt;/li&gt;  </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+如果 <code>isPacked</code> 为 true 时，则（<code>?</code>）渲染 <code>name + &#39; ✅&#39;</code>，否则（<code>:</code>）渲染 <code>name</code>。</li>
+<li><strong><code>if</code> 语句</strong><br>通过函数+if判断句可以实现更复杂的条件渲染<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">const</span><br><span class="line">articleType=1 // 1 2 3</span><br><span class="line">function getArticleTem （） &#123;</span><br><span class="line">if (articleType === 1)&#123;</span><br><span class="line">return &lt;div&gt;result is one&lt;/div&gt;&#125;</span><br><span class="line">else if (articleType === 2) &#123;</span><br><span class="line">return &lt;div&gt;result is two&lt;/div&gt;&#125;</span><br><span class="line">else &#123;</span><br><span class="line">return &lt;div&gt;result is three&lt;/div&gt;&#125;</span><br><span class="line">&#125;</span><br><span class="line">function App （）&#123;</span><br><span class="line">return (</span><br><span class="line">&lt;diy className=&quot;App&quot;&gt;</span><br><span class="line">&#123;fgetApticleTem()&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">)&#125;</span><br><span class="line">export defoult App</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       </section>
 
@@ -159,20 +166,20 @@
       
         <nav class="article-nav">
           
+          
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2024/11/24/Test1/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">闭包及this</h2>
+        <a href="/2024/11/29/props/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">react props</h2>
         </a>
       
-      <div class="card-text--row">Newer</div>
+      <div class="card-text--row">Older</div>
     </div>
   </article>
 </div>
-          
           
         </nav>
       

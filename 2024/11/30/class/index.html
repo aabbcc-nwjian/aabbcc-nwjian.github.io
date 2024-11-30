@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="YJ">
+  
+
+  
+
+  
+
+  <title>class | Hexo</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon01.png">
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(/picture01.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Hexo
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/archives">归档</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">友链</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">class</h1>
+          <h2 class="title-sub-wrap">
+            <strong>YJ</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2024-11-30T10:20:23.000Z" itemprop="datePublished">2024-11-30</time>
+          </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1><h2 id="什么是类"><a href="#什么是类" class="headerlink" title="什么是类"></a>什么是类</h2><p>在JavaScript ES6中，引入了类的概念，使得面向对象编程在JavaScript中变得更加直观和易于理解，在JavaScript中，类是通过<code>class</code>关键字来定义的。</p>
+<h2 id="类的使用"><a href="#类的使用" class="headerlink" title="类的使用"></a>类的使用</h2><h3 id="创建一个类"><a href="#创建一个类" class="headerlink" title="创建一个类"></a>创建一个类</h3><p>创建一个类有两种主要方式：类声明 和 类表达式。这两种方式都使用 class 关键字加大括号：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 类声明</span><br><span class="line">class Person &#123;&#125; </span><br><span class="line">// 类表达式 </span><br><span class="line">const Animal = class &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><p>使用<code>new</code>实例化对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Name &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">const newname = new Name();</span><br></pre></td></tr></table></figure>
+<h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h3><p>js的类中的<code>constructor</code>是一个特殊的方法，用于创建和初始化类的实例。当用<code>new</code>关键字创建一个类的新实例时，构造器会被自动调用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class MyClass &#123;</span><br><span class="line">// 类的构造器，用于初始化实例</span><br><span class="line">constructor(name) &#123;</span><br><span class="line">this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">// 类的方法</span><br><span class="line">sayHello() &#123;</span><br><span class="line">console.log(`Hello, $&#123;this.name&#125;!`);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">const myInstance = new MyClass(&#x27;world&#x27;);</span><br><span class="line">myInstance.sayHello(); // 输出: Hello, world!</span><br></pre></td></tr></table></figure>
+<p>在类中构造函数不需要用<code>function</code>定义，并且向类中添加方法时不需要用逗号将不同函数隔开。</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h3 id="extends"><a href="#extends" class="headerlink" title="extends"></a>extends</h3><p>avaScript中的类还支持继承，这意味着你可以创建一个子类，让它继承父类的属性和方法。继承是通过<code>extends</code>关键字来实现的。以下是一个简单的继承示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Animal &#123;</span><br><span class="line">    constructor(name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    speak() &#123;</span><br><span class="line">        console.log(`$&#123;this.name&#125; makes a sound.`);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Dog extends Animal &#123;</span><br><span class="line">    speak() &#123;</span><br><span class="line">        console.log(`$&#123;this.name&#125; barks.`);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">const dog = new Dog(&#x27;Rex&#x27;);</span><br><span class="line">dog.speak(); // 输出: Rex barks.</span><br></pre></td></tr></table></figure>
+<h3 id="super"><a href="#super" class="headerlink" title="super"></a>super</h3><p><code>super</code>关键字，用于类的继承, <code>super</code>允许子类访问和修改父类中定义的属性和方法，或者调用父类的构造器来确保父类被正确初始化.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">class Father &#123;</span><br><span class="line">say() &#123;</span><br><span class="line">console.log(&#x27;this fanther&#x27;);</span><br><span class="line">&#125;&#125;</span><br><span class="line">class Son extends Father&#123;</span><br><span class="line">say() &#123;</span><br><span class="line">super.say()</span><br><span class="line">&#125;&#125;</span><br><span class="line">let son = new Son</span><br><span class="line">son.say()</span><br></pre></td></tr></table></figure>
+<p>注意事项：</p>
+<ul>
+<li><code>super</code>只能在子类中使用，不能在父类或其他非类环境中使用。</li>
+<li>在子类的构造器中，<code>super()</code>调用必须是第一条语句（除了注释和声明之外）。</li>
+<li><code>super</code>不能单独使用，它必须后面跟着方法调用（<code>super.methodName()</code>）或者构造器调用（<code>super()</code>）。</li>
+</ul>
+<h3 id="new-target"><a href="#new-target" class="headerlink" title="new.target"></a>new.target</h3><p><code>new.target</code>是一个元属性（meta-property），它在构造函数或类的方法中被用来检测该函数或方法是否是通过<code>new</code>操作符被调用的。如果函数或方法是通过<code>new</code>被调用的，<code>new.target</code>会返回该函数或方法的引用；如果不是，或者在一个非构造函数上下文中，<code>new.target</code>的值为<code>undefined</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Father &#123;</span><br><span class="line">	constructor() &#123;</span><br><span class="line">		console.log(new.target);</span><br><span class="line">		if (new.target === Father) &#123;</span><br><span class="line">			throw new Error(&#x27;Vehicle cannot be directly instantiated&#x27;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Son extends Father &#123;&#125; </span><br><span class="line">new Son(); // class Son &#123;&#125; </span><br><span class="line">new Father(); // class Father &#123;&#125; </span><br><span class="line">// Error: Vehicle cannot be directly instantiated</span><br></pre></td></tr></table></figure>
+<h2 id="类的静态方法static"><a href="#类的静态方法static" class="headerlink" title="类的静态方法static"></a>类的静态方法<code>static</code></h2><p>  在js中，类的静态方法是一种特殊类型的方法，使用<code>static</code>关键字在类定义中声明，它属于类本身而不是类的实例。静态方法通过类名直接调用，而不是通过类的实例调用。这意味着静态方法不能访问或修改实例的属性，因为它们不依赖于任何特定的实例。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class MathUtils &#123;</span><br><span class="line">    static add(a, b) &#123;</span><br><span class="line">        return a + b;</span><br><span class="line">    &#125;</span><br><span class="line">    static PI = 3.14159;</span><br><span class="line">&#125;</span><br><span class="line">console.log(MathUtils.add(2, 3)); // 输出: 5</span><br><span class="line">console.log(MathUtils.PI); // 输出: 3.14159</span><br></pre></td></tr></table></figure>
+<h2 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h2><p>多重继承是指把不同类的行为集中到一个类。js中的类并不直接支持多重继承，但js提供了一些其他方式来实现类似多重继承的效果。</p>
+<h3 id="1-使用混入（Mixins）"><a href="#1-使用混入（Mixins）" class="headerlink" title="1. 使用混入（Mixins）"></a>1. 使用混入（Mixins）</h3><p>混入是一种将对象的行为（方法或属性）复制到另一个对象中的技术。在JavaScript中，你可以通过创建一个混入函数，该函数接受一个类或对象作为参数，并扩展该类或对象的功能，从而实现类似多重继承的效果。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">function MixinA(Base) &#123;</span><br><span class="line">  return class extends Base &#123;</span><br><span class="line">    methodA() &#123;</span><br><span class="line">      console.log(&#x27;Method A from MixinA&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">function MixinB(Base) &#123;</span><br><span class="line">  return class extends Base &#123;</span><br><span class="line">    methodB() &#123;</span><br><span class="line">      console.log(&#x27;Method B from MixinB&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">class MyClass extends MixinA(MixinB(class &#123;&#125;)) &#123;</span><br><span class="line">  methodC() &#123;</span><br><span class="line">    console.log(&#x27;Method C from MyClass&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const instance = new MyClass();</span><br><span class="line">instance.methodA(); // 输出: Method A from MixinA</span><br><span class="line">instance.methodB(); // 输出: Method B from MixinB</span><br><span class="line">instance.methodC(); // 输出: Method C from MyClass</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，<code>MixinA</code>和<code>MixinB</code>是两个混入函数，它们分别扩展了传入类的功能。<code>MyClass</code>则通过组合这两个混入函数（以<code>MixinA(MixinB(class &#123;&#125;))</code>的形式）来实现了类似多重继承的效果。</p>
+<h3 id="2-使用组合（Composition）"><a href="#2-使用组合（Composition）" class="headerlink" title="2. 使用组合（Composition）"></a>2. 使用组合（Composition）</h3><p>组合是一种将对象的功能通过组合其他对象来实现的技术。在JavaScript中，你可以通过在类内部持有其他类的实例，并通过代理方法调用这些实例的方法来实现组合。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class ClassA &#123;</span><br><span class="line">  methodA() &#123;</span><br><span class="line">    console.log(&#x27;Method A from ClassA&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">class ClassB &#123;</span><br><span class="line">  methodB() &#123;</span><br><span class="line">    console.log(&#x27;Method B from ClassB&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">class MyClass &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    this.classA = new ClassA();</span><br><span class="line">    this.classB = new ClassB();</span><br><span class="line">  &#125;</span><br><span class="line">  methodA() &#123;</span><br><span class="line">    this.classA.methodA();</span><br><span class="line">  &#125;</span><br><span class="line">  methodB() &#123;</span><br><span class="line">    this.classB.methodB();</span><br><span class="line">  &#125;</span><br><span class="line">  methodC() &#123;</span><br><span class="line">    console.log(&#x27;Method C from MyClass&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const instance = new MyClass();</span><br><span class="line">instance.methodA(); // 输出: Method A from ClassA</span><br><span class="line">instance.methodB(); // 输出: Method B from ClassB</span><br><span class="line">instance.methodC(); // 输出: Method C from MyClass</span><br></pre></td></tr></table></figure>
+<p>在这个例子中，<code>MyClass</code>并没有直接继承自<code>ClassA</code>和<code>ClassB</code>，而是持有它们的实例，并通过代理方法调用了它们的方法。这种方式同样实现了类似多重继承的效果，但更加灵活，因为它允许你在运行时动态地改变组合的对象。</p>
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2024/11/29/jsx/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">react jsx</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="/touxiang.png" class="soft-size--round soft-style--box" alt="YJ">
+    
+    
+      <h2>YJ</h2>
+    
+    
+      <p>贵在坚持</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>5</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+
+      <section class="widget-categories widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+      <span>CATEGORIES</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categories-list">
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/aabbcc-nwjian" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://github.com/aabbcc-nwjian" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2024 <a href="/" target="_blank">YJ</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  
+
+
+
+
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>

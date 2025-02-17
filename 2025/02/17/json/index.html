@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="YJ">
+  
+
+  
+
+  
+
+  <title>json | Hexo</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon01.png">
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(/picture01.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Hexo
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/archives">归档</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">友链</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">json</h1>
+          <h2 class="title-sub-wrap">
+            <strong>YJ</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2025-02-17T11:29:34.000Z" itemprop="datePublished">2025-02-17</time>
+          </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <p>JSON 简介</p>
+<h2 id="什么是-JSON？"><a href="#什么是-JSON？" class="headerlink" title="什么是 JSON？"></a>什么是 JSON？</h2><p>JSON（JavaScript Object Notation）是一种轻量级的<strong>数据交换格式</strong>，它是来源于JavaScript的对象语法。简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。<br>理解 JSON 最关键的一点是要把它当成一种<strong>数据格式</strong>，而不是编程语言。</p>
+<h2 id="JSON-的特点"><a href="#JSON-的特点" class="headerlink" title="JSON 的特点"></a>JSON 的特点</h2><p><strong>易于阅读和编写</strong>：JSON 格式的数据结构清晰，易于人类阅读和编写。 <strong>易于机器解析和生成</strong>：JSON 格式的数据可以被各种编程语言轻松解析和生成。 <strong>数据格式简单</strong>：与 XML 相比，JSON 遵循简单、紧凑的风格。</p>
+<h2 id="JSON-的使用场景"><a href="#JSON-的使用场景" class="headerlink" title="JSON 的使用场景"></a>JSON 的使用场景</h2><h3 id="1-Web-开发"><a href="#1-Web-开发" class="headerlink" title="1. Web 开发"></a>1. Web 开发</h3><ul>
+<li><strong>前后端数据交互</strong>：JSON 常用于前后端之间的数据传输。前端通过 AJAX 请求从后端获取 JSON 数据，并将其渲染到页面上。</li>
+<li><strong>API 响应</strong>：大多数 RESTful API 使用 JSON 作为数据格式，返回结构化的数据供客户端使用。</li>
+</ul>
+<h3 id="2-配置文件"><a href="#2-配置文件" class="headerlink" title="2. 配置文件"></a>2. 配置文件</h3><ul>
+<li><strong>应用程序配置</strong>：许多应用程序使用 JSON 文件来存储配置信息，如数据库连接信息、应用设置等。</li>
+<li><strong>开发工具配置</strong>：如 ESLint、Prettier 等工具使用 JSON 文件来定义规则和配置。</li>
+</ul>
+<h3 id="3-数据存储"><a href="#3-数据存储" class="headerlink" title="3. 数据存储"></a>3. 数据存储</h3><ul>
+<li><strong>NoSQL 数据库</strong>：如 MongoDB 使用 BSON（Binary JSON）格式存储数据，JSON 是其数据模型的基础。</li>
+<li><strong>缓存数据</strong>：Redis 等缓存系统支持 JSON 格式的数据存储，方便快速读取和写入。</li>
+</ul>
+<h3 id="4-跨平台数据交换"><a href="#4-跨平台数据交换" class="headerlink" title="4. 跨平台数据交换"></a>4. 跨平台数据交换</h3><ul>
+<li><strong>移动应用</strong>：JSON 常用于移动应用与服务器之间的数据交换，支持跨平台开发。</li>
+<li><strong>物联网（IoT）</strong>：IoT 设备通常使用 JSON 格式进行数据传输，因其轻量且易于解析。</li>
+</ul>
+<h2 id="JSON-与-JavaScript-的区别"><a href="#JSON-与-JavaScript-的区别" class="headerlink" title="JSON 与 JavaScript 的区别"></a>JSON 与 JavaScript 的区别</h2><p>JSON 不属于 JavaScript，它们只是拥有相同的语法而已。JSON 也不是只能在 JavaScript 中使用，它是一种通用数据格式。很多语言都有解析和序列化 JSON 的内置能力。</p>
+<h1 id="JSON-的基本结构"><a href="#JSON-的基本结构" class="headerlink" title="JSON 的基本结构"></a>JSON 的基本结构</h1><p>JSON 仅支持以下三种类型的值：</p>
+<h4 id="简单值：字符串、数值、布尔值和-null-可以在-JSON-中出现，就像在-JavaScript-中一样。特殊值-undefined-不可以。"><a href="#简单值：字符串、数值、布尔值和-null-可以在-JSON-中出现，就像在-JavaScript-中一样。特殊值-undefined-不可以。" class="headerlink" title="简单值：字符串、数值、布尔值和 null 可以在 JSON 中出现，就像在 JavaScript 中一样。特殊值 undefined 不可以。"></a>简单值：字符串、数值、布尔值和 null 可以在 JSON 中出现，就像在 JavaScript 中一样。特殊值 undefined 不可以。</h4><h4 id="对象：第一种复杂数据类型，对象表示有序键-值对。每个值可以是简单值，也可以是复杂类型。"><a href="#对象：第一种复杂数据类型，对象表示有序键-值对。每个值可以是简单值，也可以是复杂类型。" class="headerlink" title="对象：第一种复杂数据类型，对象表示有序键&#x2F;值对。每个值可以是简单值，也可以是复杂类型。"></a>对象：第一种复杂数据类型，对象表示有序键&#x2F;值对。每个值可以是简单值，也可以是复杂类型。</h4><h4 id="数组：第二种复杂数据类型，数组表示可以通过数值"><a href="#数组：第二种复杂数据类型，数组表示可以通过数值" class="headerlink" title="数组：第二种复杂数据类型，数组表示可以通过数值"></a>数组：第二种复杂数据类型，数组表示可以通过数值</h4><p><strong>这四种简单值中不允许内嵌其他值，而复杂数据类型允许内嵌其他值</strong></p>
+<h2 id="1、字符串"><a href="#1、字符串" class="headerlink" title="1、字符串"></a>1、字符串</h2><p>JSON的字符串是包含在双引号内的多个字符（必须使用双引号，单引号会导致语法错误）。 <strong>示例：</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Hello world!&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果字符串内包含双引号，需要使用转义字符<code>\&quot;</code>转义<br>如</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Hello \&quot; world!&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>其他转义字符：</p>
+<ul>
+<li><code>\\</code>反斜线本身；</li>
+<li><code>\/</code>正斜线；</li>
+<li><code>\&quot;</code>双引号</li>
+<li><code>\b</code>退格；</li>
+<li><code>\f</code>换页；</li>
+<li><code>\n</code>换行；</li>
+<li><code>\r</code>回车；</li>
+<li><code>\t</code>水平制表符；</li>
+<li><code>\u</code>四位的十六进制数字。</li>
+</ul>
+<h2 id="2、数字"><a href="#2、数字" class="headerlink" title="2、数字"></a>2、数字</h2><p>JSON 中不区分整型和浮点型，只支持使用 IEEE-754 双精度浮点格式来定义数字。此外，JSON 中不能使用八进制和十六进制表示数字，但可以使用 e 或 E 来表示 10 的指数。 <code>&#123; &quot;number_1&quot; : 210, &quot;number_2&quot; : -210, &quot;number_3&quot; : 21.05, &quot;number_4&quot; : 1.0E+2 &#125;</code></p>
+<h2 id="3、布尔值"><a href="#3、布尔值" class="headerlink" title="3、布尔值"></a>3、布尔值</h2><p><code>&#123; &quot;message&quot; : true, &quot;pay_succeed&quot; : false &#125;</code></p>
+<h2 id="4、null"><a href="#4、null" class="headerlink" title="4、null"></a>4、null</h2><p><code>&#123; &quot;id&quot; : 1, &quot;visibility&quot; : true, &quot;popularity&quot; : null &#125;</code></p>
+<h2 id="5、对象"><a href="#5、对象" class="headerlink" title="5、对象"></a>5、对象</h2><p>JSON 对象是一个无序的键值对集合，用花括号 <code>&#123;&#125;</code> 包围。键值对之间用逗号 <code>,</code> 分隔，键和值之间用冒号 <code>:</code> 分隔。 <strong>js中的对象表示</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line"><span class="attr">name</span>: <span class="string">&quot;Nicholas&quot;</span>,</span><br><span class="line"><span class="attr">age</span>: <span class="number">29</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>而在json中</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Nicholas&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">29</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>在json中没有变量声明（JSON 中没有变量）。其次，最后没有分号（不需要，因为不是 JavaScript 语句）。</p>
+<p>在json中，同一个对象中不允许出现两个相同的属性。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;name&quot;: &quot;Nicholas&quot;,</span><br><span class="line">&quot;age&quot;: 29,</span><br><span class="line">&quot;school&quot;: &#123;</span><br><span class="line">&quot;name&quot;: &quot;Merrimack College&quot;,</span><br><span class="line">&quot;location&quot;: &quot;North Andover, MA&quot;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，即使整个 JSON 对象中有两个属性都叫”name”，但它们属于两个不同的对象，因此是允许的。</p>
+<h2 id="6、-数组"><a href="#6、-数组" class="headerlink" title="6、 数组"></a>6、 数组</h2><p>JSON 数组是一个有序的值集合，用方括号 <code>[]</code> 包围。数组中的值可以是字符串、数字、布尔值、对象、数组或 null，值之间用逗号 <code>,</code> 分隔。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="string">&quot;apple&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;banana&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;cherry&quot;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p>同样，这里没有变量，也没有分号。数组和对象可以组合使用，以表示更加复杂的数据结构。</p>
+<h2 id="嵌套结构"><a href="#嵌套结构" class="headerlink" title="嵌套结构"></a>嵌套结构</h2><p>JSON 支持嵌套结构，即对象中可以包含数组，数组中也可以包含对象。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;John&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;age&quot;</span><span class="punctuation">:</span> <span class="number">30</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;isStudent&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;courses&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Math&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;grade&quot;</span><span class="punctuation">:</span> <span class="string">&quot;A&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Science&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;grade&quot;</span><span class="punctuation">:</span> <span class="string">&quot;B&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="json的解析与序列化"><a href="#json的解析与序列化" class="headerlink" title="json的解析与序列化"></a>json的解析与序列化</h1><h2 id="JSON-stringify-方法"><a href="#JSON-stringify-方法" class="headerlink" title="JSON.stringify()方法"></a>JSON.stringify()方法</h2><p><code>JSON.stringify()</code> 方法用于将 JavaScript 对象或值转换为 JSON 字符串。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">JSON</span>.<span class="title function_">stringify</span>(value[, replacer[, space]])</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li><strong>value</strong>: 必需，要转换为 JSON 字符串的值。</li>
+<li><strong>replacer</strong>: 可选，用于转换结果的函数或数组。<ul>
+<li>如果是一个函数，则每个属性都会经过该函数的转换。</li>
+<li>如果是一个数组，则只有包含在数组中的属性名才会被序列化。</li>
+</ul>
+</li>
+<li><strong>space</strong>: 可选，用于控制输出字符串的缩进。</li>
+</ul>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>返回一个表示给定值的 JSON 字符串。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; </span><br><span class="line"><span class="attr">name</span>: <span class="string">&quot;John&quot;</span>, </span><br><span class="line"><span class="attr">age</span>: <span class="number">30</span>, </span><br><span class="line"><span class="attr">city</span>: <span class="string">&quot;New York&quot;</span> </span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> jsonString = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(obj);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jsonString); <span class="comment">// 输出: &#123;&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:30,&quot;city&quot;:&quot;New York&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>在序列化 JavaScript 对象时，所有函数和原型成员都会有意地在结果中省略。此外，值为 undefined的任何属性也会被跳过。最终得到的就是所有实例属性均为有效 JSON 数据类型的表示。</p>
+<h4 id="JSON-stringify-方法的第三个参数控制缩进和空格。在这个参数是数值时，表示每一级缩进的空格数。例如"><a href="#JSON-stringify-方法的第三个参数控制缩进和空格。在这个参数是数值时，表示每一级缩进的空格数。例如" class="headerlink" title="JSON.stringify()方法的第三个参数控制缩进和空格。在这个参数是数值时，表示每一级缩进的空格数。例如:"></a>JSON.stringify()方法的第三个参数控制缩进和空格。在这个参数是数值时，表示每一级缩进的空格数。例如:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> book = &#123;</span><br><span class="line"><span class="attr">title</span>: <span class="string">&quot;Professional JavaScript&quot;</span>,</span><br><span class="line"><span class="attr">authors</span>: [</span><br><span class="line"><span class="string">&quot;Nicholas C. Zakas&quot;</span>,</span><br><span class="line"><span class="string">&quot;Matt Frisbie&quot;</span></span><br><span class="line">],</span><br><span class="line"><span class="attr">edition</span>: <span class="number">4</span>,</span><br><span class="line"><span class="attr">year</span>: <span class="number">2017</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> jsonText = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(book, <span class="literal">null</span>, <span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这样得到的 jsonText 格式如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Professional JavaScript&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;authors&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line"><span class="string">&quot;Nicholas C. Zakas&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="string">&quot;Matt Frisbie&quot;</span></span><br><span class="line"><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;edition&quot;</span><span class="punctuation">:</span> <span class="number">4</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;year&quot;</span><span class="punctuation">:</span> <span class="number">2017</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>JSON.stringify()方法的最大缩进值为 10，大于 10 的值会自动设置为 10。除了缩进，JSON.stringify()方法还为方便阅读插入了换行符。<br>如果缩进参数是一个字符串而非数值，那么 JSON 字符串中就会使用这个字符串而不是空格来缩进。</p>
+<h4 id="使用字符串，也可以将缩进字符设置为-Tab-或任意字符，如两个连字符："><a href="#使用字符串，也可以将缩进字符设置为-Tab-或任意字符，如两个连字符：" class="headerlink" title="使用字符串，也可以将缩进字符设置为 Tab 或任意字符，如两个连字符："></a>使用字符串，也可以将缩进字符设置为 Tab 或任意字符，如两个连字符：</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> jsonText = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(book, <span class="literal">null</span>, <span class="string">&quot;--&quot;</span> );</span><br></pre></td></tr></table></figure>
+
+<p>这样，jsonText 的值会变成如下格式：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">--<span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Professional JavaScript&quot;</span><span class="punctuation">,</span></span><br><span class="line">--<span class="attr">&quot;authors&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">----<span class="string">&quot;Nicholas C. Zakas&quot;</span><span class="punctuation">,</span></span><br><span class="line">----<span class="string">&quot;Matt Frisbie&quot;</span></span><br><span class="line">--<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">--<span class="attr">&quot;edition&quot;</span><span class="punctuation">:</span> <span class="number">4</span><span class="punctuation">,</span></span><br><span class="line">--<span class="attr">&quot;year&quot;</span><span class="punctuation">:</span> <span class="number">2017</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用字符串时同样有 10 个字符的长度限制。如果字符串长度超过 10，则会在第 10 个字符处截断。</p>
+<h2 id="JSON-parse-方法"><a href="#JSON-parse-方法" class="headerlink" title="JSON.parse()方法"></a>JSON.parse()方法</h2><p><code>JSON.parse()</code> 方法用于将 JSON 字符串解析为 JavaScript 对象或值。</p>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">JSON</span>.<span class="title function_">parse</span>(text[, reviver])</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h3><ul>
+<li><strong>text</strong>: 必需，要解析的 JSON 字符串。</li>
+<li><strong>reviver</strong>: 可选，用于转换解析结果的函数。<ul>
+<li>如果是一个函数，则每个属性都会经过该函数的转换。</li>
+</ul>
+</li>
+</ul>
+<h3 id="返回值-1"><a href="#返回值-1" class="headerlink" title="返回值"></a>返回值</h3><p>返回解析后的 JavaScript 对象或值。</p>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> jsonString = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:30,&quot;city&quot;:&quot;New York&quot;&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> obj = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(jsonString);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">name</span>); <span class="comment">// 输出: John</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="reviver-函数"><a href="#reviver-函数" class="headerlink" title="reviver 函数"></a>reviver 函数</h4><p><code>reviver</code> 函数可以在解析过程中对每个属性进行自定义处理。函数的参数为键和值，返回值为处理后的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> jsonString = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:30,&quot;city&quot;:&quot;New York&quot;&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> obj = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(jsonString, <span class="function">(<span class="params">key, value</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (key === <span class="string">&quot;age&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> value + <span class="number">1</span>; <span class="comment">// 将 age 增加 1</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> value;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">age</span>); <span class="comment">// 输出: 31</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><strong>JSON 格式校验</strong>：如果 JSON 字符串格式不正确，<code>JSON.parse()</code> 会抛出 <code>SyntaxError</code> 异常。如JSON不支持 的<code>undefined</code> 和函数。</li>
+</ul>
+<h2 id="toJSON-方法"><a href="#toJSON-方法" class="headerlink" title="toJSON()方法"></a>toJSON()方法</h2><p>有时候，对象需要在 JSON.stringify()之上自定义 JSON 序列化。此时，可以在要序列化的对象中添加 toJSON()方法，序列化时会基于这个方法返回适当的 JSON 表示。事实上，原生 Date 对象就有一个 toJSON()方法，能够自动将 JavaScript 的 Date 对象转换为 ISO 8601 日期字符串（本质上与在Date 对象上调用 toISOString()方法一样）。下面的对象为自定义序列化而添加了一个 toJSON()方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> book = &#123;</span><br><span class="line"><span class="attr">title</span>: <span class="string">&quot;Professional JavaScript&quot;</span>,</span><br><span class="line"><span class="attr">authors</span>: [</span><br><span class="line"><span class="string">&quot;Nicholas C. Zakas&quot;</span>,</span><br><span class="line"><span class="string">&quot;Matt Frisbie&quot;</span></span><br><span class="line">],</span><br><span class="line"><span class="attr">edition</span>: <span class="number">4</span>,</span><br><span class="line"><span class="attr">year</span>: <span class="number">2017</span>,</span><br><span class="line"><span class="attr">toJSON</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">title</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> jsonText = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(book);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jsonText);<span class="comment">//&quot;Professional JavaScript&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里 book 对象中定义的 toJSON()方法简单地返回了图书的书名（this.title）。与 Date 对象类似，这个对象会被序列化为简单字符串而非对象。toJSON()方法可以返回任意序列化值，都可以起到相应的作用。如果对象被嵌入在另一个对象中，返回 undefined 会导致值变成 null；或者如果是顶级对象，则本身就是 undefined。 <strong>注意，箭头函数不能用来定义 toJSON()方法。主要原因是箭头函数的词法作用域是全局作用域，在这种情况下不合适。</strong></p>
+<h2 id="JSON-的解析与生成"><a href="#JSON-的解析与生成" class="headerlink" title="JSON 的解析与生成"></a>JSON 的解析与生成</h2><h3 id="在-JavaScript-中"><a href="#在-JavaScript-中" class="headerlink" title="在 JavaScript 中"></a>在 JavaScript 中</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 解析 JSON 字符串</span></span><br><span class="line"><span class="keyword">const</span> jsonString = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;John&quot;,&quot;age&quot;:30,&quot;isStudent&quot;:false&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> obj = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(jsonString);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">name</span>); <span class="comment">// 输出: John</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 生成 JSON 字符串</span></span><br><span class="line"><span class="keyword">const</span> newObj = &#123; <span class="attr">name</span>: <span class="string">&quot;Jane&quot;</span>, <span class="attr">age</span>: <span class="number">25</span>, <span class="attr">isStudent</span>: <span class="literal">true</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> newJsonString = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(newObj);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newJsonString); <span class="comment">// 输出: &#123;&quot;name&quot;:&quot;Jane&quot;,&quot;age&quot;:25,&quot;isStudent&quot;:true&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="在-Python-中"><a href="#在-Python-中" class="headerlink" title="在 Python 中"></a>在 Python 中</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="comment"># 解析 JSON 字符串</span></span><br><span class="line">json_string = <span class="string">&#x27;&#123;&quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 30, &quot;isStudent&quot;: false&#125;&#x27;</span></span><br><span class="line">obj = json.loads(json_string)</span><br><span class="line"><span class="built_in">print</span>(obj[<span class="string">&#x27;name&#x27;</span>])  <span class="comment"># 输出: John</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成 JSON 字符串</span></span><br><span class="line">new_obj = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;Jane&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">25</span>, <span class="string">&quot;isStudent&quot;</span>: <span class="literal">True</span>&#125;</span><br><span class="line">new_json_string = json.dumps(new_obj)</span><br><span class="line"><span class="built_in">print</span>(new_json_string)  <span class="comment"># 输出: &#123;&quot;name&quot;: &quot;Jane&quot;, &quot;age&quot;: 25, &quot;isStudent&quot;: true&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>JSON 是一种轻量级数据格式，可以方便地表示复杂数据结构。这个格式使用 JavaScript 语法的一个子集表示对象、数组、字符串、数值、布尔值和 null。虽然 XML 也能胜任同样的角色，但 JSON 更简洁，JavaScript 支持也更好。更重要的是，所有浏览器都已经原生支持全局 JSON 对象。</p>
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2024/12/08/router/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">react router</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="/touxiang.png" class="soft-size--round soft-style--box" alt="YJ">
+    
+    
+      <h2>YJ</h2>
+    
+    
+      <p>贵在坚持</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>7</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+
+      <section class="widget-categories widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+      <span>CATEGORIES</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categories-list">
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/aabbcc-nwjian" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://github.com/aabbcc-nwjian" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2025 <a href="/" target="_blank">YJ</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  
+
+
+
+
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>

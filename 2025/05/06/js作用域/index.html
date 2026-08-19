@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="YJ">
+  
+
+  
+
+  
+
+  <title>JS作用域 | Hexo</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon01.png">
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(/background/picture01.png)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Hexo
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/archives">归档</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">JS作用域</h1>
+          <h2 class="title-sub-wrap">
+            <strong>YJ</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2025-05-06T03:48:00.000Z" itemprop="datePublished">2025-05-06</time>
+          </h2>
+          
+            <h2 class="last-time">
+              <span>最后更新于</span>
+              <time  class="article-updated" datetime="2026-07-21T11:59:32.231Z" itemprop="dateUpdated">2026-07-21</time>
+            </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <aside class="toc-info">
+      
+<section class="widget-toc widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <div class="widget-title-main">
+      <svg class="icon icon-toc" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M134.50666666 767.46666668H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.23999999v50.13333333c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H134.50666666c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.13333333c0.10666668-27.73333333 22.50666668-50.24000001 50.24000001-50.24000001zM84.37333332 541.65333333h326.18666669c27.73333333 0 50.24000001 22.39999999 50.23999999 50.13333334v50.24000001c0 27.73333333-22.50666668 50.24000001-50.24000002 50.23999999H84.37333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.23999999v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333334zM134.50666666 315.83999999H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.24000001v50.24000001c0 27.73333333-22.50666668 50.13333334-50.24000001 50.13333333H134.50666666c-27.73333333 0-50.24000001-22.39999999-50.23999999-50.13333333v-50.24000001c0.10666668-27.84000001 22.50666668-50.24000001 50.24000001-50.23999999zM209.81333332 89.91999999h326.18666671c27.73333333 0 50.24000001 22.39999999 50.23999997 50.13333335v50.23999999c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H209.81333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333333zM692.05333333 623.36l274.66666669 176.00000002c23.36000001 14.93333333 30.08 45.97333334 15.14666666 69.33333332L954.77333334 910.93333333c-14.93333333 23.25333334-45.97333334 30.08-69.33333335 15.14666667l-274.66666666-176c-23.36000001-14.93333333-30.08-45.97333334-15.14666667-69.33333333l27.09333334-42.24000001c14.93333333-23.36000001 46.08000001-30.08 69.33333333-15.14666666z" fill="currentColor"></path>
+</svg>
+      <span>目录</span>
+    </div>
+    <button class="toc-toggle" type="button" aria-label="隐藏目录" aria-expanded="true">隐藏</button>
+  </div>
+  <div class="widget-body">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JS%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.</span> <span class="toc-text">JS作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%88Scope%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">一、什么是作用域（Scope）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%9F"><span class="toc-number">1.1.1.</span> <span class="toc-text">为什么需要作用域？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">二、作用域的底层原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">二、作用域的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%85%A8%E5%B1%80%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 全局作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 函数作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%88ES6%EF%BC%89"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 块级作用域（ES6）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%EF%BC%88Scope-Chain%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">四、作用域链（Scope Chain）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81let%E3%80%81const%E5%92%8Cvar"><span class="toc-number">1.5.</span> <span class="toc-text">五、let、const和var</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%8C%BA%E5%88%AB"><span class="toc-number">1.5.1.</span> <span class="toc-text">作用域区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87"><span class="toc-number">1.5.2.</span> <span class="toc-text">变量提升</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%A4%8D%E5%A3%B0%E6%98%8E"><span class="toc-number">1.5.3.</span> <span class="toc-text">重复声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for-%E5%BE%AA%E7%8E%AF-setTimeout"><span class="toc-number">1.5.4.</span> <span class="toc-text">for 循环 + setTimeout</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E9%97%AD%E5%8C%85%EF%BC%88Closure%EF%BC%89"><span class="toc-number">1.6.</span> <span class="toc-text">六、闭包（Closure）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E9%97%AD%E5%8C%85%EF%BC%9F"><span class="toc-number">1.6.1.</span> <span class="toc-text">1. 什么是闭包？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%BA%A7%E7%94%9F%E9%97%AD%E5%8C%85"><span class="toc-number">1.6.2.</span> <span class="toc-text">2. 为什么会产生闭包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%97%AD%E5%8C%85%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">1.6.3.</span> <span class="toc-text">3. 闭包的应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%8A%A8%E6%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.7.</span> <span class="toc-text">七、词法作用域与动态作用域</span></a></li></ol></li></ol>
+  </div>
+</section>
+
+
+    </aside>
+
+    <div class="article-info">
+      <div class="article-scrollbar" aria-hidden="true">
+        <div class="article-scrollbar-thumb"></div>
+      </div>
+
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="JS作用域"><a href="#JS作用域" class="headerlink" title="JS作用域"></a>JS作用域</h1><h2 id="一、什么是作用域（Scope）"><a href="#一、什么是作用域（Scope）" class="headerlink" title="一、什么是作用域（Scope）"></a>一、什么是作用域（Scope）</h2><p>作用域：<strong>变量和函数可以被访问的范围</strong>。<br>简单说就是一套规则，它决定了程序中的变量和函数在哪里可以被访问，在哪里不能。</p>
+<p>比如下面这个例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// ✅ 可以访问</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b); <span class="comment">// ❌ 报错</span></span><br></pre></td></tr></table></figure>
+<h3 id="为什么需要作用域？"><a href="#为什么需要作用域？" class="headerlink" title="为什么需要作用域？"></a>为什么需要作用域？</h3><ul>
+<li>避免变量污染（命名冲突）</li>
+<li>控制访问权限</li>
+<li>提高代码可维护性</li>
+</ul>
+<h2 id="二、作用域的底层原理"><a href="#二、作用域的底层原理" class="headerlink" title="二、作用域的底层原理"></a>二、作用域的底层原理</h2><p>引擎在解释JS代码之前，会经历三个步骤：</p>
+<ol>
+<li><strong>分词&#x2F;词法分析</strong>：将代码字符串分解成有意义的代码块（词法单元）。例如，var a &#x3D; 2; 会被分解为 var、a、&#x3D;、2、;。</li>
+<li><strong>解析&#x2F;语法分析</strong>：将词法单元流（数组）转换成一个由元素逐级嵌套所组成的“抽象语法树”（AST）。</li>
+<li><strong>代码生成</strong>：将AST转换为可执行代码的过程。</li>
+</ol>
+<p><code>作用域</code>在其中负责收集并维护由所有声明的标识符（变量）组成的一系列查询，并实施一套非常严格的规则，确定当前执行的代码对这些标识符的访问权限。</p>
+<p>对于 var a &#x3D; 2; 这条语句，我们通常会认为这是一个声明。但引擎并不这么看。它会将它拆成两个步骤：</p>
+<ol>
+<li><strong>编译阶段</strong>：编译器询问作用域是否已有一个名为 a 的变量存在于同一个作用域集合中。如果是，则忽略该声明；否则，编译器会在当前作用域中声明一个新变量，并命名为 a。</li>
+<li><strong>执行阶段</strong>：引擎运行时，会先询问作用域，在当前作用域集合中是否存在一个叫作 a 的变量。如果是，引擎就会使用这个变量，并进行赋值操作（a &#x3D; 2）；如果否，引擎会继续向外层作用域查找（也就是作用域链）。</li>
+</ol>
+<p>实现这个的关键在于<code>LHS查询</code>与<code>RHS查询</code>:</p>
+<ul>
+<li><strong>LHS（Left-hand Side）</strong>：找到变量容器本身，以便对其赋值。例如 a &#x3D; 2，我们只关心赋值操作的目标是谁。</li>
+<li><strong>RHS（Right-hand Side）</strong>：获取变量的源值。例如 console.log(a)，我们需要查找并取得 a 的值。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function foo(a) &#123;</span><br><span class="line">    console.log(a); // 2</span><br><span class="line">&#125;</span><br><span class="line">foo(2);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol>
+<li>执行 foo(2)，这是一个RHS引用（查找foo的值）。</li>
+<li>将 2 作为参数传递给 foo 时，隐含了一个 a &#x3D; 2 的赋值操作，这是一个LHS引用。</li>
+<li>执行 console.log(a)，对 a 进行RHS引用。</li>
+<li>执行 console.log(…)，对 console 对象进行RHS引用，并检查是否有 log 方法。</li>
+</ol>
+<h2 id="二、作用域的类型"><a href="#二、作用域的类型" class="headerlink" title="二、作用域的类型"></a>二、作用域的类型</h2><table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">关键字&#x2F;场景</th>
+<th align="left">特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>全局作用域</strong></td>
+<td align="left">不在任何函数或块内声明的变量</td>
+<td align="left">代码任何地方都能访问</td>
+</tr>
+<tr>
+<td align="left"><strong>函数作用域</strong></td>
+<td align="left"><code>function</code> 声明的函数内部</td>
+<td align="left">只在函数内部可见</td>
+</tr>
+<tr>
+<td align="left"><strong>块级作用域</strong></td>
+<td align="left"><code>let</code> &#x2F; <code>const</code> + <code>&#123;&#125;</code></td>
+<td align="left">只在 <code>&#123;&#125;</code> 内部可见</td>
+</tr>
+</tbody></table>
+<h3 id="1-全局作用域"><a href="#1-全局作用域" class="headerlink" title="1. 全局作用域"></a>1. 全局作用域</h3><p>全局作用域是指在任何函数之外定义的变量，这些变量可以在代码的任何地方访问。在浏览器环境中，全局作用域的全局对象是window，在Node.js中是global。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> globalVar = <span class="string">&#x27;I am global&#x27;</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(globalVar); <span class="comment">// 可以访问到 globalVar</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">test</span>();</span><br></pre></td></tr></table></figure>
+<p><strong>window对象的属性也属于全局作用域</strong></p>
+<h3 id="2-函数作用域"><a href="#2-函数作用域" class="headerlink" title="2. 函数作用域"></a>2. 函数作用域</h3><p>函数作用域是指在函数内部定义的变量，这些变量只能在函数内部访问。内层作用域可以访问到外层作用域，而外层作用域不能访问到内层作用域。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-块级作用域（ES6）"><a href="#3-块级作用域（ES6）" class="headerlink" title="3. 块级作用域（ES6）"></a>3. 块级作用域（ES6）</h3><p>块级作用域是指在块（由 {} 包围的代码块）内部定义的变量，这些变量只能在块内部访问。由 <code>let</code> 和 <code>const</code> 声明产生的也是块级作用域。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+<p><strong>在循环内部又是一个单独的作用域</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for(let i = 0; i &lt; 2; i++) &#123;</span><br><span class="line">    let i = &#x27;hello&#x27;;</span><br><span class="line">    console.log(i);    // &#x27;hello&#x27; &#x27;hello&#x27; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、作用域链（Scope-Chain）"><a href="#四、作用域链（Scope-Chain）" class="headerlink" title="四、作用域链（Scope Chain）"></a>四、作用域链（Scope Chain）</h2><p>当一个块或函数嵌套在另一个块或函数中时，就发生了作用域的嵌套。当访问变量时，JS会在所在的作用域中查找不到的时候，它会一层一层向上查找，直到找到全局作用域还没有找到的时候，就会放弃查找。这种一层一层的关系，就是作用域链。</p>
+<p><strong>当前作用域查找</strong>-&gt; <strong>向外层作用域查找</strong> -&gt; <strong>一直找到全局作用域</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> globalVar = <span class="string">&#x27;全局&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">outer</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> outerVar = <span class="string">&#x27;外部&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">inner</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> innerVar = <span class="string">&#x27;内部&#x27;</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(innerVar); <span class="comment">// 内部 → 自己的作用域</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(outerVar); <span class="comment">// 外部 → 找到了 outer 的</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(globalVar); <span class="comment">// 全局 → 一路找到了全局</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">inner</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">outer</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、let、const和var"><a href="#五、let、const和var" class="headerlink" title="五、let、const和var"></a>五、let、const和var</h2><h3 id="作用域区别"><a href="#作用域区别" class="headerlink" title="作用域区别"></a>作用域区别</h3><p>var：没有块级作用域</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (true) &#123;</span><br><span class="line">  var a = 1;</span><br><span class="line">&#125;</span><br><span class="line">console.log(a); //  1</span><br></pre></td></tr></table></figure>
+<p><code>&#123;&#125;</code>内部的var没有块级作用域，能被外层的<code>console.log</code>访问，如果是let、const，这种情况就会报错。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (true) &#123;</span><br><span class="line">  let a = 1;</span><br><span class="line">&#125;</span><br><span class="line">console.log(a); // 报错</span><br></pre></td></tr></table></figure>
+
+<h3 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h3><p>变量提升是指JavaScript在代码执行之前会将变量声明提升到其作用域的顶部</p>
+<p>var：会进行变量提升，而且是“先声明再赋值”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(a); // undefined</span><br><span class="line">var a = 10;</span><br></pre></td></tr></table></figure>
+<p>相当于：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a;</span><br><span class="line">console.log(a);</span><br><span class="line">a = 10;</span><br></pre></td></tr></table></figure>
+<p>编译时，JS看到 var a，会在当前作用域顶部创建变量a，并用 undefined 初始化它</p>
+<p>对于let、const：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(a); // 报错</span><br><span class="line">let a = 10;</span><br></pre></td></tr></table></figure>
+<p>let、const也会进行变量提升，但不会初始化，而是进入暂时性死区（TDZ），即声明之前，禁止访问</p>
+<h3 id="重复声明"><a href="#重复声明" class="headerlink" title="重复声明"></a>重复声明</h3><p>var：可以重复声明</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = 1;</span><br><span class="line">var a = 2;</span><br><span class="line">console.log(a); // 2</span><br></pre></td></tr></table></figure>
+<p>不报错，直接覆盖</p>
+<p>let &#x2F; const重复声明则会报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let a = 1;</span><br><span class="line">let a = 2; // 报错</span><br></pre></td></tr></table></figure>
+<h3 id="for-循环-setTimeout"><a href="#for-循环-setTimeout" class="headerlink" title="for 循环 + setTimeout"></a>for 循环 + setTimeout</h3><p>看看以下例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 使用 var</span><br><span class="line">for (var i = 0; i &lt; 3; i++) &#123;</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;, 0);</span><br><span class="line">&#125;</span><br><span class="line">// 输出：3 3 3</span><br><span class="line"></span><br><span class="line">// 使用 let</span><br><span class="line">for (let i = 0; i &lt; 3; i++) &#123;</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">  &#125;, 0);</span><br><span class="line">&#125;</span><br><span class="line">// 输出：0 1 2</span><br></pre></td></tr></table></figure>
+<p>由于<code>块级作用域</code>的存在，let每次迭代都会创建一个新的块级作用域，并为当前的i保存一个副本。而var 声明的变量在整个函数（或全局）作用域内有效，循环不会创建新作用域。</p>
+<h2 id="六、闭包（Closure）"><a href="#六、闭包（Closure）" class="headerlink" title="六、闭包（Closure）"></a>六、闭包（Closure）</h2><h3 id="1-什么是闭包？"><a href="#1-什么是闭包？" class="headerlink" title="1. 什么是闭包？"></a>1. 什么是闭包？</h3><p>当一个函数能够”记住”并访问它所在的词法作用域（即使这个函数是在当前作用域之外执行），就产生了闭包。<br>即：<strong>函数 + 其词法作用域的组合</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">outer</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">inner</span>(<span class="params"></span>) &#123;</span><br><span class="line">    count++;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(count);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fn = <span class="title function_">outer</span>();</span><br><span class="line"><span class="title function_">fn</span>(); <span class="comment">// 1</span></span><br><span class="line"><span class="title function_">fn</span>(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-为什么会产生闭包"><a href="#2-为什么会产生闭包" class="headerlink" title="2. 为什么会产生闭包"></a>2. 为什么会产生闭包</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">    var a = 1;</span><br><span class="line">    return function() &#123;</span><br><span class="line">        console.log(a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var bar = foo();</span><br><span class="line">bar();</span><br></pre></td></tr></table></figure>
+<p>foo()函数的执行结果返回给bar，而此时由于变量a还在使用，因而没有被销毁，然后执行bar()函数。这样，我们就能在外部作用域访问到函数内部作用域的变量。这个就是闭包。<br><strong>闭包的形成条件：函数嵌套、内部函数引用外部函数的局部变量</strong></p>
+<h3 id="3-闭包的应用"><a href="#3-闭包的应用" class="headerlink" title="3. 闭包的应用"></a>3. 闭包的应用</h3><h4 id="1-数据私有化"><a href="#1-数据私有化" class="headerlink" title="(1) 数据私有化"></a>(1) 数据私有化</h4><p>利用闭包，可以创建外部无法直接访问的私有变量，只能通过暴露的接口操作。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">createCounter</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;  <span class="comment">// 私有变量，外部无法直接访问</span></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="title function_">inc</span>(<span class="params"></span>) &#123; count++; &#125;,</span><br><span class="line">    <span class="title function_">dec</span>(<span class="params"></span>) &#123; count--; &#125;,</span><br><span class="line">    <span class="title function_">get</span>(<span class="params"></span>) &#123; <span class="keyword">return</span> count; &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> counter = <span class="title function_">createCounter</span>();</span><br><span class="line">counter.<span class="title function_">inc</span>();</span><br><span class="line">counter.<span class="title function_">inc</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(counter.<span class="title function_">get</span>()); <span class="comment">// 2</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(counter.<span class="property">count</span>); <span class="comment">// undefined，无法直接访问</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>实际应用场景</strong>：状态管理（如 Redux 的 store）、对象封装、模块模式。</p>
+<h4 id="2-防抖-节流"><a href="#2-防抖-节流" class="headerlink" title="(2) 防抖 &#x2F; 节流"></a>(2) 防抖 &#x2F; 节流</h4><p>防抖和节流是前端性能优化的重要技术，都利用闭包来<strong>持久保存定时器 ID</strong>，确保多次调用时能正确清除或管理前一次的操作。</p>
+<p><strong>防抖（Debounce）</strong>：连续触发时，只在最后一次执行。适用于输入框搜索、窗口 resize。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer = <span class="literal">null</span>;  <span class="comment">// 闭包保存定时器ID</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="built_in">clearTimeout</span>(timer);  <span class="comment">// 清除前一次定时器</span></span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用示例：搜索输入</span></span><br><span class="line"><span class="keyword">const</span> searchHandler = <span class="title function_">debounce</span>(<span class="function">(<span class="params">keyword</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;发起搜索:&#x27;</span>, keyword);</span><br><span class="line">&#125;, <span class="number">500</span>);</span><br><span class="line"></span><br><span class="line"><span class="title function_">searchHandler</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line"><span class="title function_">searchHandler</span>(<span class="string">&#x27;ab&#x27;</span>);</span><br><span class="line"><span class="title function_">searchHandler</span>(<span class="string">&#x27;abc&#x27;</span>);  <span class="comment">// 只有这次触发的会真正执行</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>节流（Throttle）</strong>：固定时间内只执行一次。适用于滚动加载、按钮连点、拖拽。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span>(<span class="params">fn, interval</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> lastTime = <span class="number">0</span>;  <span class="comment">// 闭包保存上次执行时间</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> now = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="keyword">if</span> (now - lastTime &gt;= interval) &#123;</span><br><span class="line">      lastTime = now;</span><br><span class="line">      fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用示例：滚动事件</span></span><br><span class="line"><span class="keyword">const</span> scrollHandler = <span class="title function_">throttle</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;滚动位置:&#x27;</span>, <span class="variable language_">window</span>.<span class="property">scrollY</span>);</span><br><span class="line">&#125;, <span class="number">200</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;scroll&#x27;</span>, scrollHandler);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>为什么需要闭包？</strong> 因为 <code>timer</code>（防抖）和 <code>lastTime</code>（节流）必须在多次函数调用之间<strong>保持存活</strong>，但又不能放在全局（避免污染），闭包正好解决了这个问题。</p>
+</blockquote>
+<h4 id="3-函数柯里化"><a href="#3-函数柯里化" class="headerlink" title="(3) 函数柯里化"></a>(3) 函数柯里化</h4><p>柯里化（Currying）是把接受多个参数的函数转换成一系列接受单个参数的函数。核心是利用闭包<strong>逐个收集参数</strong>，直到参数齐全再执行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 手动实现柯里化</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">curry</span>(<span class="params">fn</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">curried</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (args.<span class="property">length</span> &gt;= fn.<span class="property">length</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);  <span class="comment">// 参数够了，执行</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">...moreArgs</span>) &#123;  <span class="comment">// 参数不够，继续收集</span></span><br><span class="line">        <span class="keyword">return</span> curried.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args.<span class="title function_">concat</span>(moreArgs));</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 示例：计算商品价格</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">calcPrice</span>(<span class="params">price, tax, discount</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> price * (<span class="number">1</span> + tax) * discount;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> curriedCalc = <span class="title function_">curry</span>(calcPrice);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 固定税率 10%</span></span><br><span class="line"><span class="keyword">const</span> withTax = <span class="title function_">curriedCalc</span>(<span class="number">100</span>, <span class="number">0.1</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">withTax</span>(<span class="number">0.9</span>));  <span class="comment">// 99  100 * 1.1 * 0.9</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">withTax</span>(<span class="number">0.8</span>));  <span class="comment">// 88</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 分步传参</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">curriedCalc</span>(<span class="number">100</span>)(<span class="number">0.1</span>)(<span class="number">0.9</span>));  <span class="comment">// 99</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>柯里化的价值</strong>：</p>
+<ul>
+<li><strong>参数复用</strong>：固定某些参数，生成专用函数</li>
+<li><strong>延迟执行</strong>：参数收集完毕才真正运算</li>
+<li><strong>函数组合</strong>：配合 <code>compose</code>&#x2F;<code>pipe</code> 实现更灵活的管道操作</li>
+</ul>
+<h4 id="闭包的this"><a href="#闭包的this" class="headerlink" title="闭包的this"></a>闭包的this</h4><h2 id="七、词法作用域与动态作用域"><a href="#七、词法作用域与动态作用域" class="headerlink" title="七、词法作用域与动态作用域"></a>七、词法作用域与动态作用域</h2><h4 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h4><p>词法作用域也是静态作用域，在JavaScript中采用的就是词法作用域。词法作用域就是定义在词法阶段的作用域。换句话说，词法作用域是由你在写代码时将变量和块作用域写在哪里决定的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let x = &#x27;全局&#x27;;</span><br><span class="line"></span><br><span class="line">function foo() &#123;</span><br><span class="line">  console.log(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function bar() &#123;</span><br><span class="line">  let x = &#x27;局部&#x27;;</span><br><span class="line">  foo(); // foo 在这里被调用</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bar(); // 输出 &#x27;全局&#x27;，而不是 &#x27;局部&#x27;</span><br></pre></td></tr></table></figure>
+<p>foo 函数是在全局作用域中定义的，所以它的作用域链中，外层就是全局作用域，与它在哪被调用无关。</p>
+<h4 id="动态作用域"><a href="#动态作用域" class="headerlink" title="动态作用域"></a>动态作用域</h4><p>动态作用域与词法作用域相反，是指变量的作用域在函数调用时确定，而不是在代码编写时确定。在动态作用域中，变量的查找取决于函数从哪里调用，而不是从哪里定义。</p>
+<p>大多数现代编程语言（包括JavaScript）都不采用动态作用域。少数语言，如早期的Lisp方言和Bash脚本语言，采用动态作用域。</p>
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2025/07/20/AST/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">AST</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2025/04/17/Canvas/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Canvas</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="/favicon01.png" class="soft-size--round soft-style--box" alt="YJ">
+    
+    
+      <h2>YJ</h2>
+    
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>14</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        1
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        2
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      <section class="widget-categories widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+      <span>CATEGORIES</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categories-list">
+      
+        <li class="categories-list-item">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/">
+            前端 (2)
+          </a>
+        </li>
+        
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/tags/ai/" style="font-size: 10px;" class="tags-cloud-0">ai</a> <a href="/tags/js/" style="font-size: 10px;" class="tags-cloud-0">js</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    <!-- 
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/aabbcc-nwjian" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://github.com/aabbcc-nwjian" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2026 <a href="/" target="_blank">YJ</a></p>
+
+     -->
+
+    <!-- <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p> -->
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  
+
+
+
+
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>

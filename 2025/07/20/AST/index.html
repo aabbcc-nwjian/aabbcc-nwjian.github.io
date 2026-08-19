@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="YJ">
+  
+
+  
+
+  
+
+  <title>AST | Hexo</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon01.png">
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(/background/picture01.png)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Hexo
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/archives">归档</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">AST</h1>
+          <h2 class="title-sub-wrap">
+            <strong>YJ</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2025-07-20T09:20:00.000Z" itemprop="datePublished">2025-07-20</time>
+          </h2>
+          
+            <h2 class="last-time">
+              <span>最后更新于</span>
+              <time  class="article-updated" datetime="2026-07-21T11:59:32.223Z" itemprop="dateUpdated">2026-07-21</time>
+            </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <aside class="toc-info">
+      
+<section class="widget-toc widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <div class="widget-title-main">
+      <svg class="icon icon-toc" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M134.50666666 767.46666668H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.23999999v50.13333333c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H134.50666666c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.13333333c0.10666668-27.73333333 22.50666668-50.24000001 50.24000001-50.24000001zM84.37333332 541.65333333h326.18666669c27.73333333 0 50.24000001 22.39999999 50.23999999 50.13333334v50.24000001c0 27.73333333-22.50666668 50.24000001-50.24000002 50.23999999H84.37333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.23999999v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333334zM134.50666666 315.83999999H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.24000001v50.24000001c0 27.73333333-22.50666668 50.13333334-50.24000001 50.13333333H134.50666666c-27.73333333 0-50.24000001-22.39999999-50.23999999-50.13333333v-50.24000001c0.10666668-27.84000001 22.50666668-50.24000001 50.24000001-50.23999999zM209.81333332 89.91999999h326.18666671c27.73333333 0 50.24000001 22.39999999 50.23999997 50.13333335v50.23999999c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H209.81333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333333zM692.05333333 623.36l274.66666669 176.00000002c23.36000001 14.93333333 30.08 45.97333334 15.14666666 69.33333332L954.77333334 910.93333333c-14.93333333 23.25333334-45.97333334 30.08-69.33333335 15.14666667l-274.66666666-176c-23.36000001-14.93333333-30.08-45.97333334-15.14666667-69.33333333l27.09333334-42.24000001c14.93333333-23.36000001 46.08000001-30.08 69.33333333-15.14666666z" fill="currentColor"></path>
+</svg>
+      <span>目录</span>
+    </div>
+    <button class="toc-toggle" type="button" aria-label="隐藏目录" aria-expanded="true">隐藏</button>
+  </div>
+  <div class="widget-body">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AST"><span class="toc-number">1.</span> <span class="toc-text">AST</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AST-%E7%9A%84%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9"><span class="toc-number">1.1.1.</span> <span class="toc-text">AST 的核心特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AST-%E7%9A%84%E7%94%9F%E6%88%90%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">AST 的生成过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90%E9%98%B6%E6%AE%B5%EF%BC%88Lexical-Analysis%EF%BC%89"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.词法分析阶段（Lexical Analysis）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%E9%98%B6%E6%AE%B5%EF%BC%88Syntax-Analysis%EF%BC%89"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.语法分析阶段（Syntax Analysis）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AST-%E7%9A%84%E8%AF%AD%E4%B9%89%E4%BF%A1%E6%81%AF"><span class="toc-number">1.3.</span> <span class="toc-text">AST 的语义信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AST-%E5%9C%A8-Babel-%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">AST 在 Babel 中的应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Babel-%E7%9A%84%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">Babel 的处理流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.4.2.</span> <span class="toc-text">常见应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Babel-%E6%8F%92%E4%BB%B6"><span class="toc-number">1.5.</span> <span class="toc-text">Babel 插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%BB%93%E6%9E%84"><span class="toc-number">1.5.1.</span> <span class="toc-text">插件基础结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Visitor-%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.5.2.</span> <span class="toc-text">Visitor 开发模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91"><span class="toc-number">1.5.3.</span> <span class="toc-text">插件开发</span></a></li></ol></li></ol></li></ol>
+  </div>
+</section>
+
+
+    </aside>
+
+    <div class="article-info">
+      <div class="article-scrollbar" aria-hidden="true">
+        <div class="article-scrollbar-thumb"></div>
+      </div>
+
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="AST"><a href="#AST" class="headerlink" title="AST"></a>AST</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>AST：Abstract Syntax Tree（抽象语法树）</strong> ,是源代码语法结构的一种抽象表示，它以树状的形式表现编程语言的语法结构，树上的每个节点都表示源代码中的一种结构。</p>
+<p>常用于代码语法的检查、代码风格的检查、代码的格式化、代码的高亮、代码错误提示、代码自动补全等等场景</p>
+<h3 id="AST-的核心特点"><a href="#AST-的核心特点" class="headerlink" title="AST 的核心特点"></a>AST 的核心特点</h3><ul>
+<li><strong>树状结构</strong>：每个节点代表代码中的一个构造（如表达式、语句等）</li>
+<li><strong>忽略细节</strong>：不保留空格、注释、分隔符等非逻辑元素</li>
+<li><strong>语言无关</strong>：不同语言有不同的 AST 规范（如 JavaScript 使用 ESTree）</li>
+</ul>
+<h2 id="AST-的生成过程"><a href="#AST-的生成过程" class="headerlink" title="AST 的生成过程"></a>AST 的生成过程</h2><p>生成 AST 的过程主要分为 <strong>词法分析 (Lexical Analysis)</strong> 和 <strong>语法分析 (Syntax Analysis)</strong> </p>
+<h3 id="1-词法分析阶段（Lexical-Analysis）"><a href="#1-词法分析阶段（Lexical-Analysis）" class="headerlink" title="1.词法分析阶段（Lexical Analysis）"></a>1.词法分析阶段（Lexical Analysis）</h3><h4 id="核心任务"><a href="#核心任务" class="headerlink" title="核心任务"></a>核心任务</h4><p>将源代码字符流转换为有意义的 <strong>词法单元（tokens）</strong>，每个 token 包含：</p>
+<ul>
+<li><strong>类型</strong>（关键字&#x2F;标识符&#x2F;运算符等）</li>
+<li><strong>值</strong>（具体的字符内容）</li>
+<li><strong>位置信息</strong>（行号、列号）</li>
+</ul>
+<h4 id="JavaScript-关键-Token-类型"><a href="#JavaScript-关键-Token-类型" class="headerlink" title="JavaScript 关键 Token 类型"></a>JavaScript 关键 Token 类型</h4><table>
+<thead>
+<tr>
+<th>Token 类型</th>
+<th>示例</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Identifier</code></td>
+<td><code>sum</code>, <code>a</code></td>
+<td>变量名&#x2F;函数名</td>
+</tr>
+<tr>
+<td><code>Keyword</code></td>
+<td><code>const</code>, <code>function</code></td>
+<td>语言关键字</td>
+</tr>
+<tr>
+<td><code>Punctuator</code></td>
+<td><code>=</code>, <code>+</code>, <code>=&gt;</code></td>
+<td>运算符和标点符号</td>
+</tr>
+<tr>
+<td><code>NumericLiteral</code></td>
+<td><code>42</code></td>
+<td>数字字面量</td>
+</tr>
+<tr>
+<td><code>StringLiteral</code></td>
+<td><code>&quot;hello&quot;</code></td>
+<td>字符串字面量</td>
+</tr>
+</tbody></table>
+<h4 id="示例代码的-Token-流"><a href="#示例代码的-Token-流" class="headerlink" title="示例代码的 Token 流"></a>示例代码的 Token 流</h4><p>对于代码 <code>const sum = (a, b) =&gt; a + b;</code>，生成的 tokens 类似：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Keyword&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;const&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">0</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Identifier&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;sum&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">6</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Punctuator&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;=&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">10</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Punctuator&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;(&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">12</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Identifier&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;a&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">13</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Punctuator&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;,&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">14</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Identifier&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;b&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">16</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Punctuator&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;)&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">17</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Punctuator&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;=&gt;&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">19</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Identifier&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;a&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">22</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Punctuator&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;+&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">24</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Identifier&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;b&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">26</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">type</span>: <span class="string">&#x27;Punctuator&#x27;</span>, <span class="attr">value</span>: <span class="string">&#x27;;&#x27;</span>, <span class="attr">line</span>: <span class="number">1</span>, <span class="attr">column</span>: <span class="number">27</span> &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-语法分析阶段（Syntax-Analysis）"><a href="#2-语法分析阶段（Syntax-Analysis）" class="headerlink" title="2.语法分析阶段（Syntax Analysis）"></a>2.语法分析阶段（Syntax Analysis）</h3><h4 id="核心任务-1"><a href="#核心任务-1" class="headerlink" title="核心任务"></a>核心任务</h4><p>根据语言的语法规则，将 tokens 组织成 <strong>树形结构</strong>。关键过程：</p>
+<ol>
+<li><p><strong>语法规则匹配</strong>：使用上下文无关文法（CFG）验证结构</p>
+</li>
+<li><p><strong>节点生成</strong>：为每个语法结构创建 AST 节点</p>
+</li>
+<li><p><strong>错误恢复</strong>：遇到错误时尝试继续解析</p>
+</li>
+</ol>
+<h4 id="关键节点类型解析"><a href="#关键节点类型解析" class="headerlink" title="关键节点类型解析"></a>关键节点类型解析</h4><h4 id="1-Program-节点"><a href="#1-Program-节点" class="headerlink" title="1. Program 节点"></a>1. Program 节点</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Program&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span>...<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;sourceType&quot;</span><span class="punctuation">:</span> <span class="string">&quot;module&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>根节点</strong>，表示整个程序</p>
+</li>
+<li><p><code>body</code> 包含所有顶层语句</p>
+</li>
+</ul>
+<h4 id="2-VariableDeclaration-节点"><a href="#2-VariableDeclaration-节点" class="headerlink" title="2. VariableDeclaration 节点"></a>2. VariableDeclaration 节点</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;VariableDeclaration&quot;</span><span class="punctuation">,</span><span class="comment">// 变量声明语句</span></span><br><span class="line"> <span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;const&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;declarations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span>...<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>kind</code>：声明类型（<code>var</code>&#x2F;<code>let</code>&#x2F;<code>const</code>）</p>
+</li>
+<li><p><code>declarations</code>：变量声明器列表</p>
+</li>
+</ul>
+<h4 id="3-VariableDeclarator-节点"><a href="#3-VariableDeclarator-节点" class="headerlink" title="3. VariableDeclarator 节点"></a>3. VariableDeclarator 节点</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;VariableDeclarator&quot;</span><span class="punctuation">,</span><span class="comment">// 单个变量的声明器</span></span><br><span class="line"> <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>...<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;init&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>...<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>id</code>：被声明的标识符</p>
+</li>
+<li><p><code>init</code>：初始化表达式</p>
+</li>
+</ul>
+<h4 id="4-ArrowFunctionExpression-节点"><a href="#4-ArrowFunctionExpression-节点" class="headerlink" title="4. ArrowFunctionExpression 节点"></a>4. ArrowFunctionExpression 节点</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ArrowFunctionExpression&quot;</span><span class="punctuation">,</span><span class="comment">// 箭头函数表达式</span></span><br><span class="line"> <span class="attr">&quot;params&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span>...<span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>...<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;expression&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>params</code>：参数列表</p>
+</li>
+<li><p><code>body</code>：函数体（可能是块语句或表达式）</p>
+</li>
+<li><p><code>expression</code>：是否为简写形式（无大括号）</p>
+</li>
+</ul>
+<h4 id="5-BinaryExpression-节点"><a href="#5-BinaryExpression-节点" class="headerlink" title="5. BinaryExpression 节点"></a>5. BinaryExpression 节点</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;BinaryExpression&quot;</span><span class="punctuation">,</span><span class="comment">// 二元运算表达式</span></span><br><span class="line"> <span class="attr">&quot;operator&quot;</span><span class="punctuation">:</span> <span class="string">&quot;+&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;left&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>...<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;right&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>...<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>表示二元运算（加减乘除等）</p>
+</li>
+<li><p><code>operator</code>：运算符类型</p>
+</li>
+<li><p><code>left/right</code>：左右操作数</p>
+</li>
+</ul>
+<p><strong>最终<code>const sum = (a, b) =&gt; a + b;</code> 生成的 AST 结构：</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Program&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;VariableDeclaration&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;declarations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;VariableDeclarator&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Identifier&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sum&quot;</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;init&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ArrowFunctionExpression&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;params&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line"> <span class="punctuation">&#123;</span> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Identifier&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;a&quot;</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="punctuation">&#123;</span> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Identifier&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;b&quot;</span> <span class="punctuation">&#125;</span></span><br><span class="line"> <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;body&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;BinaryExpression&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;operator&quot;</span><span class="punctuation">:</span> <span class="string">&quot;+&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;left&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Identifier&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;a&quot;</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;right&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Identifier&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;b&quot;</span> <span class="punctuation">&#125;</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="AST-的语义信息"><a href="#AST-的语义信息" class="headerlink" title="AST 的语义信息"></a>AST 的语义信息</h2><p>除了语法结构，高级 AST 还会包含：</p>
+<ol>
+<li><p><strong>作用域信息</strong>：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Identifier&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;a&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;scope&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;FunctionScope&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;bindings&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;a&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>...<span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="attr">&quot;b&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span>...<span class="punctuation">&#125;</span> <span class="punctuation">&#125;</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>类型注解</strong>（TypeScript）：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Parameter&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;x&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;typeAnnotation&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;NumberKeyword&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>代码位置</strong>（用于错误报告）：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;BinaryExpression&quot;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;loc&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line"> <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;line&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span> <span class="attr">&quot;column&quot;</span><span class="punctuation">:</span> <span class="number">22</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"> <span class="attr">&quot;end&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;line&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span> <span class="attr">&quot;column&quot;</span><span class="punctuation">:</span> <span class="number">26</span> <span class="punctuation">&#125;</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="AST-在-Babel-中的应用"><a href="#AST-在-Babel-中的应用" class="headerlink" title="AST 在 Babel 中的应用"></a>AST 在 Babel 中的应用</h2><p><code>Babel </code>是一个<code>JavaScript</code>编译器，其核心工作流程完全基于 AST 操作</p>
+<p><strong><code>Babel</code> 中常用到的功能包：</strong></p>
+<p>@babel&#x2F;core：Babel 编译器本身，提供了 babel 的编译 API；<br>@babel&#x2F;parser：将 JavaScript 代码解析成 AST 语法树；<br>@babel&#x2F;traverse：遍历、修改 AST 语法树的各个节点；<br>@babel&#x2F;generator：将 AST 还原成 JavaScript 代码；<br>@babel&#x2F;types：判断、验证节点的类型、构建新 AST 节点等。</p>
+<h3 id="Babel-的处理流程"><a href="#Babel-的处理流程" class="headerlink" title="Babel 的处理流程"></a>Babel 的处理流程</h3><ol>
+<li><p><strong>Parse</strong>：通过 <code>@babel/parser</code> 将源代码转换为 AST,这个过程要经<code>词法分析</code>、<code>语法分析</code>、<code>构建AST（抽象语法树）</code>一系列操作；</p>
+</li>
+<li><p><strong>Transform</strong>：通过 <code>@babel/traverse</code> 遍历并修改 AST,按照编译器指定的规则进行处理，形成一个新的表现形式；</p>
+</li>
+<li><p><strong>Generate</strong>：通过 <code>@babel/generator</code> 将 AST 转化为新的代码</p>
+</li>
+</ol>
+<h3 id="常见应用场景"><a href="#常见应用场景" class="headerlink" title="常见应用场景"></a>常见应用场景</h3><h4 id="1-语法转换（ES6-→-ES5）"><a href="#1-语法转换（ES6-→-ES5）" class="headerlink" title="1. 语法转换（ES6+ → ES5）"></a>1. 语法转换（ES6+ → ES5）</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输入：ES6 箭头函数</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].<span class="title function_">map</span>(<span class="function"><span class="params">n</span> =&gt;</span> n * <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Babel 转换为：</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].<span class="title function_">map</span>(<span class="keyword">function</span>(<span class="params">n</span>) &#123; <span class="keyword">return</span> n * <span class="number">2</span>; &#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-代码分析"><a href="#2-代码分析" class="headerlink" title="2. 代码分析"></a>2. 代码分析</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 @babel/traverse 统计函数调用次数</span></span><br><span class="line"><span class="title function_">traverse</span>(ast, &#123;</span><br><span class="line"> <span class="title class_">CallExpression</span>(path) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Found call to: <span class="subst">$&#123;path.node.callee.name&#125;</span>`</span>);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-代码修改-优化"><a href="#3-代码修改-优化" class="headerlink" title="3. 代码修改&#x2F;优化"></a>3. 代码修改&#x2F;优化</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将所有的 console.log 替换为空函数</span></span><br><span class="line"><span class="title function_">traverse</span>(ast, &#123;</span><br><span class="line"> <span class="title class_">CallExpression</span>(path) &#123;</span><br><span class="line"> <span class="keyword">if</span> (path.<span class="property">node</span>.<span class="property">callee</span>.<span class="property">object</span>?.<span class="property">name</span> === <span class="string">&#x27;console&#x27;</span> &amp;&amp; </span><br><span class="line">path.<span class="property">node</span>.<span class="property">callee</span>.<span class="property">property</span>?.<span class="property">name</span> === <span class="string">&#x27;log&#x27;</span>) &#123;</span><br><span class="line"> path.<span class="title function_">replaceWith</span>(t.<span class="title function_">identifier</span>(<span class="string">&#x27;void 0&#x27;</span>));</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Babel-插件"><a href="#Babel-插件" class="headerlink" title="Babel 插件"></a>Babel 插件</h2><p>Babel 插件系统是整个 Babel 工具链中最核心的部分，它允许开发者通过操作 AST 来实现各种代码转换和分析功能。</p>
+<h3 id="插件基础结构"><a href="#插件基础结构" class="headerlink" title="插件基础结构"></a>插件基础结构</h3><h4 id="1-最小插件示例"><a href="#1-最小插件示例" class="headerlink" title="1. 最小插件示例"></a>1. 最小插件示例</h4><p>一个最简单的 Babel 插件只需要导出一个返回 visitor 对象的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"> <span class="keyword">return</span> &#123;</span><br><span class="line"> <span class="attr">visitor</span>: &#123;</span><br><span class="line"> <span class="title class_">Identifier</span>(path) &#123;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`发现标识符: <span class="subst">$&#123;path.node.name&#125;</span>`</span>);</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>Babel 在遍历 AST 时，会检查每个节点的类型</p>
+</li>
+<li><p>当遇到<code>Identifier</code>类型的节点时，就会调用插件中对应的访问器函数</p>
+</li>
+<li><p>访问器接收一个<code>path</code>参数，这个参数封装了当前节点的信息及其上下文</p>
+</li>
+</ol>
+<h4 id="2-插件生命周期"><a href="#2-插件生命周期" class="headerlink" title="2. 插件生命周期"></a>2. 插件生命周期</h4><p>一个完整的Babel插件可以定义多个生命周期钩子，这些钩子提供了对编译过程更精细的控制：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="keyword">function</span>(<span class="params">babel</span>) &#123;</span><br><span class="line"> <span class="keyword">return</span> &#123;</span><br><span class="line"> <span class="attr">name</span>: <span class="string">&quot;my-plugin&quot;</span>,</span><br><span class="line"> <span class="title function_">pre</span>(<span class="params">state</span>) &#123;</span><br><span class="line"> <span class="comment">// 在遍历开始前执行</span></span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;插件开始执行&quot;</span>);</span><br><span class="line"> &#125;,</span><br><span class="line"> <span class="attr">visitor</span>: &#123;</span><br><span class="line"> <span class="comment">// AST 节点访问器</span></span><br><span class="line"> &#125;,</span><br><span class="line"> <span class="title function_">post</span>(<span class="params">state</span>) &#123;</span><br><span class="line"> <span class="comment">// 在遍历结束后执行</span></span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;插件执行完毕&quot;</span>);</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Visitor-开发模式"><a href="#Visitor-开发模式" class="headerlink" title="Visitor 开发模式"></a>Visitor 开发模式</h3><p>Visitor 对象定义了要处理的AST节点类型及其对应的处理函数。Babel采用深度优先遍历策略访问AST，对每个节点会经历两个阶段：</p>
+<h4 id="1-基本-Visitor-模式"><a href="#1-基本-Visitor-模式" class="headerlink" title="1. 基本 Visitor 模式"></a>1. 基本 Visitor 模式</h4><p>Visitor 对象定义了要访问的 AST 节点类型：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> visitor = &#123;</span><br><span class="line">  <span class="title class_">FunctionDeclaration</span>: &#123;</span><br><span class="line">    <span class="title function_">enter</span>(<span class="params">path</span>) &#123;</span><br><span class="line">      <span class="comment">// 第一次遇到该节点时执行</span></span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;进入函数声明:&quot;</span>, path.<span class="property">node</span>.<span class="property">id</span>.<span class="property">name</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">exit</span>(<span class="params">path</span>) &#123;</span><br><span class="line">      <span class="comment">// 处理完所有子节点后执行</span></span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;离开函数声明:&quot;</span>, path.<span class="property">node</span>.<span class="property">id</span>.<span class="property">name</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title class_">VariableDeclarator</span>(path) &#123;</span><br><span class="line">    <span class="comment">// 简写形式，等同于enter阶段</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;处理变量声明:&quot;</span>, path.<span class="property">node</span>.<span class="property">id</span>.<span class="property">name</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>在<code>enter</code>阶段准备处理环境或执行前置检查</p>
+</li>
+<li><p>在<code>exit</code>阶段执行汇总处理或结果收集</p>
+</li>
+</ul>
+<h4 id="2-路径-Path-API"><a href="#2-路径-Path-API" class="headerlink" title="2. 路径(Path) API"></a>2. 路径(Path) API</h4><p>Path 对象是 Babel 插件开发的核心接口，提供了丰富的操作方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">visitor</span>: &#123;</span><br><span class="line">  <span class="title class_">BinaryExpression</span>(path) &#123;</span><br><span class="line">    <span class="comment">// 节点信息访问</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;操作符:&quot;</span>, path.<span class="property">node</span>.<span class="property">operator</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;左操作数:&quot;</span>, path.<span class="property">node</span>.<span class="property">left</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;右操作数:&quot;</span>, path.<span class="property">node</span>.<span class="property">right</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 树结构导航</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;父节点:&quot;</span>, path.<span class="property">parent</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;父路径:&quot;</span>, path.<span class="property">parentPath</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;作用域:&quot;</span>, path.<span class="property">scope</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 节点操作</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="title function_">shouldTransform</span>(path)) &#123;</span><br><span class="line">      <span class="keyword">const</span> newNode = t.<span class="title function_">binaryExpression</span>(</span><br><span class="line">        <span class="string">&quot;*&quot;</span>, </span><br><span class="line">        path.<span class="property">node</span>.<span class="property">left</span>, </span><br><span class="line">        path.<span class="property">node</span>.<span class="property">right</span></span><br><span class="line">      );</span><br><span class="line">      path.<span class="title function_">replaceWith</span>(newNode);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 流程控制</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="title function_">shouldSkipChildren</span>(path)) &#123;</span><br><span class="line">      path.<span class="title function_">skip</span>();  <span class="comment">// 跳过当前节点的子节点遍历</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="title function_">shouldStop</span>(path)) &#123;</span><br><span class="line">      path.<span class="title function_">stop</span>();  <span class="comment">// 完全停止遍历</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 节点验证</span></span><br><span class="line">    <span class="keyword">if</span> (path.<span class="property">type</span> !== <span class="string">&quot;BinaryExpression&quot;</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> path.<span class="title function_">buildCodeFrameError</span>(<span class="string">&quot;预期是二元表达式&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 动态遍历</span></span><br><span class="line">    path.<span class="title function_">traverse</span>(&#123;</span><br><span class="line">      <span class="title class_">Identifier</span>(innerPath) &#123;</span><br><span class="line">        <span class="comment">// 只遍历当前节点的子节点</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Path对象的核心能力包括：</p>
+<ol>
+<li><p><strong>节点操作</strong>：replaceWith、insertBefore、remove等</p>
+</li>
+<li><p><strong>作用域分析</strong>：检查绑定、重命名变量等</p>
+</li>
+<li><p><strong>类型检查</strong>：isXXX方法判断节点类型</p>
+</li>
+<li><p><strong>路径查找</strong>：findParent向上查找特定路径</p>
+</li>
+<li><p><strong>评估</strong>：对表达式进行静态评估</p>
+</li>
+</ol>
+<h3 id="插件开发"><a href="#插件开发" class="headerlink" title="插件开发"></a>插件开发</h3><h4 id="1-代码转换插件"><a href="#1-代码转换插件" class="headerlink" title="1. 代码转换插件"></a>1. 代码转换插件</h4><p><strong>示例：将普通函数转为箭头函数</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="keyword">function</span>(<span class="params">babel</span>) &#123;</span><br><span class="line"> <span class="keyword">const</span> &#123; <span class="attr">types</span>: t &#125; = babel;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> &#123;</span><br><span class="line"> <span class="attr">visitor</span>: &#123;</span><br><span class="line"> <span class="title class_">FunctionExpression</span>(path) &#123;</span><br><span class="line"> <span class="keyword">if</span> (!path.<span class="property">node</span>.<span class="property">id</span>) &#123; <span class="comment">// 忽略命名函数</span></span><br><span class="line"> path.<span class="title function_">replaceWith</span>(</span><br><span class="line"> t.<span class="title function_">arrowFunctionExpression</span>(</span><br><span class="line"> path.<span class="property">node</span>.<span class="property">params</span>,</span><br><span class="line"> path.<span class="property">node</span>.<span class="property">body</span></span><br><span class="line"> )</span><br><span class="line"> );</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-代码分析插件"><a href="#2-代码分析插件" class="headerlink" title="2. 代码分析插件"></a>2. 代码分析插件</h4><p><strong>示例：统计函数复杂度</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="title function_">pre</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">complexityMap</span> = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">visitor</span>: &#123;</span><br><span class="line">      <span class="title class_">Function</span>(path) &#123;</span><br><span class="line">        <span class="keyword">let</span> complexity = <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        path.<span class="title function_">traverse</span>(&#123;</span><br><span class="line">          <span class="title class_">IfStatement</span>() &#123; complexity++ &#125;,</span><br><span class="line">          <span class="title class_">ForStatement</span>() &#123; complexity++ &#125;,</span><br><span class="line">          <span class="title class_">WhileStatement</span>() &#123; complexity++ &#125;,</span><br><span class="line">          <span class="title class_">SwitchCase</span>() &#123; complexity++ &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">const</span> name = path.<span class="property">node</span>.<span class="property">id</span>?.<span class="property">name</span> || <span class="string">&quot;anonymous&quot;</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">complexityMap</span>.<span class="title function_">set</span>(name, complexity);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">post</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;函数复杂度统计:&quot;</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">complexityMap</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">val, key</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;key&#125;</span>: <span class="subst">$&#123;val&#125;</span>`</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-代码优化插件"><a href="#3-代码优化插件" class="headerlink" title="3. 代码优化插件"></a>3. 代码优化插件</h4><p><strong>示例：常量折叠</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="keyword">function</span>(<span class="params">babel</span>) &#123;</span><br><span class="line"> <span class="keyword">const</span> &#123; <span class="attr">types</span>: t &#125; = babel;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> &#123;</span><br><span class="line"> <span class="attr">visitor</span>: &#123;</span><br><span class="line"> <span class="title class_">BinaryExpression</span>(path) &#123;</span><br><span class="line"> <span class="keyword">const</span> &#123; confident, value &#125; = path.<span class="title function_">evaluate</span>();</span><br><span class="line"> <span class="keyword">if</span> (confident) &#123;</span><br><span class="line"> path.<span class="title function_">replaceWith</span>(t.<span class="title function_">valueToNode</span>(value));</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2025/08/17/D3.js/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">D3.js</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2025/05/06/js%E4%BD%9C%E7%94%A8%E5%9F%9F/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">JS作用域</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="/favicon01.png" class="soft-size--round soft-style--box" alt="YJ">
+    
+    
+      <h2>YJ</h2>
+    
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>14</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        1
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        2
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      <section class="widget-categories widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+      <span>CATEGORIES</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categories-list">
+      
+        <li class="categories-list-item">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/">
+            前端 (2)
+          </a>
+        </li>
+        
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/tags/ai/" style="font-size: 10px;" class="tags-cloud-0">ai</a> <a href="/tags/js/" style="font-size: 10px;" class="tags-cloud-0">js</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    <!-- 
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/aabbcc-nwjian" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://github.com/aabbcc-nwjian" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2026 <a href="/" target="_blank">YJ</a></p>
+
+     -->
+
+    <!-- <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p> -->
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  
+
+
+
+
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
